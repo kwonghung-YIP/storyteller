@@ -11,4 +11,5 @@ wheels/
 
 .vscode/
 outputs/
+.pytest_cache/
 .env

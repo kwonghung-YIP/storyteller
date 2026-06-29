@@ -10,7 +10,8 @@ from google.genai.types import Content, Part, GenerateContentConfig, GenerateCon
 from google.genai.types import BatchJob, InlinedRequest, CreateBatchJobConfig, JobState, JobError
 
 from model import AgentRequest, AgentConfig, AgentResponse
-from database import Chat
+from database import Chat, GoogleBatchJob, GoogleBatchJobRepository
+from database import open_session, PostgresHostConfig
 
 logger = logging.getLogger(__name__)
 
@@ -146,4 +147,30 @@ class GoogleLLM(BaseModel):
                 save_batchjob_to_mock('async-batch', request, batchJob)
 
         return batchJob
+
+    async def check_batchjob_state(self, pgHostConfig:PostgresHostConfig) -> None:
+        apikey:str = GoogleLLM.load_apikey()
+        async with Client(api_key=apikey).aio as client:
+            async with open_session(pgHostConfig) as session:
+                repo:GoogleBatchJobRepository = GoogleBatchJobRepository(session)
+                async for job in await client.batches.list():
+                    logger.info(job.name)
+                    record:GoogleBatchJob = await repo.findByName(job.name)
+                    if record is None:
+                        record = GoogleBatchJob.from_batch_job(job)
+                        session.add(record)
+                    else:
+                        if record.state == job.state:
+                            logger.info("BatchJob state stay put: %s -> %s", record.state, job.state)
+                        else:
+                            logger.info("BatchJob state changed from %s -> %s", record.state, job.state)
+                            record.createTime = job.create_time
+                            record.startTime = job.start_time
+                            record.updateTime = job.update_time
+                            record.endTime = job.end_time
+                            record.state = job.state
+                            record.error = job.error
+                            record.batchjobJson = job.model_dump_json()
+
+
 

@@ -8,5 +8,6 @@ from .model import (
 
 from .postgres import (
     open_session,
-    ChatRepository
+    ChatRepository,
+    GoogleBatchJobRepository,
 )

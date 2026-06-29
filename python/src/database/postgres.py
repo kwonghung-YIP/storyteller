@@ -55,9 +55,9 @@ class ChatRepository:
     async def findById(self, chatId: uuid.UUID) -> Chat|None:
         stmt = select(Chat).options(joinedload(Chat.messages)).where(Chat.id==chatId)
         result = await self._session.scalars(stmt)
-        return result.unique().one()
+        return result.unique().one_on_none()
     
-class GoolgeBatchJobRepository:
+class GoogleBatchJobRepository:
     
     def __init__(self, session: AsyncSession):
         self._session: AsyncSession = session
@@ -65,4 +65,4 @@ class GoolgeBatchJobRepository:
     async def findByName(self, name:str) -> GoogleBatchJob|None:
         stmt = select(GoogleBatchJob).where(GoogleBatchJob.name==name)
         result = await self._session.scalars(stmt)
-        return result.unique().one()
+        return result.unique().one_or_none()

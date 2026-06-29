@@ -84,6 +84,6 @@ class GoogleBatchJob(Base):
             updateTime=batchJob.update_time,
             endTime=batchJob.end_time,
             error=batchJob.error,
-            batchjobJson=batchJob.model_dump_json(indent=4)
+            batchjobJson=batchJob.model_dump_json()
         )
         return result

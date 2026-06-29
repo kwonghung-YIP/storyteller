@@ -19,6 +19,7 @@ from .model import RabbitHostConfig, QueueConfig
 
 from model import AgentRequest, AgentConfig, AgentResponse
 from agent import AgentHelper, GoogleGenContentRequest, GoogleLLM
+from database import PostgresHostConfig
 
 logger = logging.getLogger(__name__)
 
@@ -319,6 +320,7 @@ class PikaConsumer(threading.Thread):
             async with asyncio.TaskGroup() as tg:
                 # define background tasks
                 bgTask = tg.create_task(self.backgroundTask(), name="backgroundTask")
+                googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(), name="googleBatchJobTask")
                 consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['agent-request'].queue, tg, self.request_routing)
                 consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async'].queue, tg, self.google_generate_content)
                 consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async-batch'].queue, tg, self.google_batch_job)
@@ -335,6 +337,16 @@ class PikaConsumer(threading.Thread):
         while not self._termSignal.is_set():
             logger.debug("The self._termSignal has not activated sleep for %d sec...", interval)
             await asyncio.sleep(interval)
+
+    async def googleBatchJobBGTask(self, interval:float=60*5) -> None:
+        """
+        """
+        pgHostConfig:PostgresHostConfig = instantiate(self._appConfig.postgres.connection)
+        while not self._termSignal.is_set():
+            logger.info("Check Google GenAI BatchJob state...")
+            await self._googleLLM.check_batchjob_state(pgHostConfig)
+            await asyncio.sleep(interval)
+
 
     async def request_routing(self, channel:Channel, raw:bytes, props:BasicProperties) -> None:
         agentRequest:AgentRequest = AgentRequest.model_validate_json(raw)
