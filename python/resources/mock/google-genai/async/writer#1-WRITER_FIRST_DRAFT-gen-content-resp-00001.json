@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 12 Jun 2026 13:47:47 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=5397",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the vast, shimmering Sapphire Sea, nestled among whispering kelp forests and playful coral castles, lived a little sponge named Spongeb. Spongeb wasn't just any sponge; he was a vibrant, sunshine-yellow sponge, shaped like a perfect, cheerful square. He spent his days happily soaking up the gentle currents, his pores tingling with the salty water, and giggling as tiny fish tickled his sides.\n\nSpongeb loved his life. He loved feeling the sunbeams dappling through the water, he loved the gentle sway of the tide, and he especially loved being a sponge. He was very good at being a sponge – he could soak up more water than any other sponge his size, and when a little crab scurried by, Spongeb would playfully absorb a tiny bit of water and then puff it out in a gentle spray, making the crab scuttle away with a surprised click-clack.\n\nBut one day, while Spongeb was basking near a patch of glowing anemones, he noticed something peculiar. A little seahorse, with a tail like a curly ribbon, was swimming past. The seahorse paused and looked at Spongeb.\n\n\"Hello there, little square fellow!\" chirped the seahorse.\n\nSpongeb felt a strange tingle. He usually just felt the water and the fish. \"Hello!\" he bubbled back.\n\nThe seahorse tilted its head. \"You're a very bright yellow, aren't you?\"\n\n\"I am?\" Spongeb wiggled, though he didn't quite know *how* he was wiggling.\n\n\"And you have so many little holes!\" the seahorse continued, pointing with its nose. \"It must be quite useful for holding all that water.\"\n\nSpongeb had never thought about his holes before. He knew he soaked up water, but he hadn't considered *why*. He looked down, or as down as a sponge could look, at his own form. He saw his bright yellow color, his distinct square shape, and the countless tiny openings that dotted his surface.\n\n\"I... I guess so,\" Spongeb murmured, feeling a new kind of tingle, one that wasn't from the water. It was a thinking tingle.\n\nThe seahorse smiled. \"Well, it's lovely to meet you, square sponge! I'm Pippin, and I'm a seahorse. I have a fin on my back that helps me swim, and a tail that helps me hold onto things!\" Pippin gave a little flip, his fin shimmering.\n\nSpongeb watched Pippin, mesmerized. He had never really *watched* himself before. He had always just *been*. Now, seeing Pippin point out his features, Spongeb started to see them too. He saw that he was different from the flowing kelp, different from the darting fish, and different from Pippin the seahorse.\n\n\"I'm... Spongeb,\" he said, the name feeling new and solid on his porous tongue. \"And I'm... a sponge.\" He said it with a little more certainty this time.\n\nPippin nodded. \"Indeed you are! And a wonderful sponge you are!\" And with a flick of his tail, Pippin swam away.\n\nSpongeb stayed there for a long time. The currents still flowed, the fish still tickled, but something inside Spongeb had changed. He looked at his own yellow edges, felt the texture of his own square form, and understood that he wasn't just *in* the sea; he was *Spongeb*, a unique, bright yellow, holey, water-soaking sponge. He realized he had a shape, a color, and a way of being all his own.\n\nFrom that day on, Spongeb still loved to soak up the water and play with the little crabs. But now, when he puffed out his water spray, he did it with a little extra twinkle in his pores, a twinkle that came from knowing exactly who he was. He was Spongeb, the happy, square sponge, and that was a wonderful thing to be.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "_g0sauS8IJLokdUPq-DCiAY",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 869,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 892,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 892
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1761,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

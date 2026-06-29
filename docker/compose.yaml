@@ -1,0 +1,41 @@
+services:
+  rabbitmq:
+    image: rabbitmq:${RABBITMQ_VERSION:-4.3.2-management}
+    container_name: rabbitmq
+    hostname: rabbitmq_node
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: admin 
+      RABBITMQ_DEFAULT_PASS: passwd
+
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      start_period: 10s
+      start_interval: 5s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  postgres:
+    image: postgres:${POSTGRES_VERSION:-18.4}
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=passwd
+      - POSTGRES_DB=db1
+    volumes:
+      - ./postgres/init-db:/docker-entrypoint-initdb.d:ro
+
+  adminer:
+    image: adminer:${ADMINER_VERSION:-5.4.2}
+    container_name: adminer
+    ports:
+      - 8081:8080
+    links:
+      - postgres:db
+    depends_on:
+      - postgres
