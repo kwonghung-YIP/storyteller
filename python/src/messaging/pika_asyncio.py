@@ -326,36 +326,53 @@ class PikaConsumer(threading.Thread):
 
             helper:AgentHelper = AgentHelper(self._appConfig, pub_resp_func)
 
+            consumer_tags = []
             async with asyncio.TaskGroup() as tg:
                 # define background tasks
-                bgTask = tg.create_task(self.backgroundTask(), name="backgroundTask")
+                bgTask = tg.create_task(self.backgroundTask(tg), name="backgroundTask")
                 googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(helper), name="googleBatchJobTask")
-                consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['agent-request'].queue, tg, self.request_routing)
-                consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async'].queue, tg, self.google_generate_content)
-                consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async-batch'].queue, tg, self.google_batch_job)
+                consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['agent-request'].queue, tg, self.request_routing))
+                consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async'].queue, tg, self.google_generate_content))
+                consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async-batch'].queue, tg, self.google_batch_job))
 
             logger.info("asyncio.TaskGroup completed.")
 
-    async def backgroundTask(self, interval:float=1) -> None:
+            for tag in consumer_tags:
+                await cancel_subscription(channel, tag)
+
+    async def backgroundTask(self, taskgroup:asyncio.TaskGroup, interval:float=1) -> None:
         """
         This background task keep running until any external party call the self.stop()
         function to set the self._termSignal, without this background thread, the taskgroup
         will end immediately and will not wait for incoming message.
         """
-        logger.info("Starting the background task...")
-        while not self._termSignal.is_set():
-            logger.debug("The self._termSignal has not activated sleep for %d sec...", interval)
-            await asyncio.sleep(interval)
+        myTask = asyncio.current_task()
+        try:
+            logger.info("Starting the background task...")
+            while not self._termSignal.is_set():
+                logger.debug("The self._termSignal has not activated sleep for %d sec...", interval)
+                await asyncio.sleep(interval)
+
+            logger.info("Canceling other tasks in the same taskgroup...")
+            others = [ task for task in taskgroup._tasks if task.get_name() != myTask.get_name()]
+            for task in others:
+                task.cancel()
+        finally:
+            logger.info("task [%s] completed.", myTask.get_name())
 
     async def googleBatchJobBGTask(self, helper:AgentHelper, interval:float=60*5) -> None:
         """
         """
-        pgHostConfig:PostgresHostConfig = instantiate(self._appConfig.postgres.connection)
-        while not self._termSignal.is_set():
-            logger.info("Check Google GenAI BatchJob state...")
-            await helper.check_batchjob_state()
-            await asyncio.sleep(interval)
-
+        myTask = asyncio.current_task()
+        try:
+            while not self._termSignal.is_set():
+                logger.info("Check Google GenAI BatchJob state...")
+                await helper.check_batchjob_state()
+                await asyncio.sleep(interval)
+        except asyncio.CancelledError:
+            logger.info("Task [%s] has been cancelled.", myTask.get_name())
+        finally:
+            logger.info("task [%s] completed.", myTask.get_name())
 
     async def request_routing(self, channel:Channel, raw:bytes, props:BasicProperties) -> None:
         agentRequest:AgentRequest = AgentRequest.model_validate_json(raw)

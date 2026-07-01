@@ -82,13 +82,13 @@ class AgentHelper:
             modelRespId=response.response_id, responseJson=response.model_dump_json())
         
         session.add(record)
-        session.flush()
+        await session.flush()
 
         output:str = config.renderGoogleModelOutput(response)
         new_message = ChatMessage(role="model", responseId=record.responseId, text=output)
         chat.addMessage(new_message)
 
-        session.flush()
+        await session.flush()
 
         target:AgentResponse = AgentResponse(
             responseId=record.responseId, 
@@ -130,10 +130,11 @@ class AgentHelper:
 
                         record = GoogleBatchJob()
                         record.copy_from_batch_job(job)
+                        record.error = "Cannot find the BatchJob record"
                         session.add(record)
 
-                        if job.done:
-                            await self.handle_completed_batchjob(session, job, record)        
+                        #if job.done:
+                        #    await self.handle_completed_batchjob(session, job, record)        
 
                     else:
                         if record.state == job.state:
@@ -176,8 +177,11 @@ class AgentHelper:
                 chatId=nvl(metadata, "chat_id"),
                 flowId=nvl(metadata, "flow_id"),
                 flowType=metadata.get("flow_type"),
+                userInput=None,
             )
         except ValidationError as err:
+            logger.exception("Fail to create AgentRequest from metadata")
+            record.error = "missing metadata to create the AgentRequest"
             return
         
         response:GenerateContentResponse = inlinedResponse.response
@@ -188,5 +192,5 @@ class AgentHelper:
         
         body:str = agentResponse.model_dump_json(indent=4)
 
-        self._publish_response(body=body)
+        self._publishResponse(body=body)
 

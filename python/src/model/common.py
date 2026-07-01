@@ -17,7 +17,7 @@ class AgentRequest(BaseModel):
     chatId: uuid.UUID|None
     flowId: uuid.UUID
     flowType: str
-    userInput: dict[str,Any]
+    userInput: dict[str,Any]|None
 
 class AgentResponse(BaseModel):
     responseId: uuid.UUID
