@@ -57,4 +57,4 @@ postgres:
     database: db1
 
 google-genai:
-  mock: true
+  mock: false

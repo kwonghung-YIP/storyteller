@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS model_response (
 
 CREATE TABLE IF NOT EXISTS google_genai_batch_job (
     name VARCHAR(255) NOT NULL PRIMARY KEY,
+    request_id UUID,
+    response_id UUID REFERENCES model_response(response_id),
     display_name VARCHAR(255) NOT NULL,
     state VARCHAR(30) NOT NULL,
     create_time TIMESTAMP,

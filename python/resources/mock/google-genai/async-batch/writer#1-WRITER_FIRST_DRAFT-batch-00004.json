@@ -1,0 +1,15 @@
+{
+    "name": "batches/kp1hn13nprl1q7r5qth88o9opj6ljeg6cvvl",
+    "display_name": "BatchJob...",
+    "state": "JOB_STATE_PENDING",
+    "error": null,
+    "create_time": "2026-06-30T00:42:47.621113Z",
+    "start_time": null,
+    "end_time": null,
+    "update_time": "2026-06-30T00:42:47.621113Z",
+    "model": "models/gemini-2.5-flash-lite",
+    "src": null,
+    "dest": null,
+    "completion_stats": null,
+    "output_info": null
+}

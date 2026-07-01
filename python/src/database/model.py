@@ -10,7 +10,7 @@ from sqlalchemy.dialects.postgresql import UUID, JSONB
 
 from sqlalchemy.orm import declarative_base
 
-from google.genai.types import BatchJob
+from google.genai.types import BatchJob, InlinedResponse
 
 Base = declarative_base()
 
@@ -70,20 +70,23 @@ class GoogleBatchJob(Base):
     startTime: Mapped[datetime.datetime] = mapped_column(TIMESTAMP(timezone=True), name="start_time", nullable=False)
     updateTime: Mapped[datetime.datetime] = mapped_column(TIMESTAMP(timezone=True), name="update_time", nullable=False)
     endTime: Mapped[datetime.datetime] = mapped_column(TIMESTAMP(timezone=True), name="end_time", nullable=False)
+    requestId: Mapped[uuid.UUID] = mapped_column(UUID, name="request_id", nullable=True)
+    responseId: Mapped[uuid.UUID] = mapped_column(UUID, name="response_id", nullable=True)
     error = Column(JSONB, nullable=True)
     batchjobJson = Column(JSONB, name="batchjob_json", nullable=False)
+    
+    def copy_from_batch_job(self, batchJob:BatchJob) -> None:
+        self.name = batchJob.name
+        self.displayName = batchJob.display_name
+        self.state = batchJob.state
+        self.createTime = batchJob.create_time
+        self.startTime = batchJob.start_time
+        self.updateTime = batchJob.update_time
+        self.endTime = batchJob.end_time
+        self.error = batchJob.error
+        self.batchjobJson = batchJob.model_dump_json()
 
-    @classmethod
-    def from_batch_job(cls, batchJob:BatchJob) -> GoogleBatchJob:
-        result = cls(
-            name=batchJob.name,
-            displayName=batchJob.display_name,
-            state=batchJob.state,
-            createTime=batchJob.create_time,
-            startTime=batchJob.start_time,
-            updateTime=batchJob.update_time,
-            endTime=batchJob.end_time,
-            error=batchJob.error,
-            batchjobJson=batchJob.model_dump_json()
-        )
-        return result
+        if batchJob.dest:
+            inlinedResponse:InlinedResponse = batchJob.dest.inlined_responses[0]
+            if inlinedResponse.metadata:
+                self.requestId = uuid.UUID(inlinedResponse.metadata["request_id"])

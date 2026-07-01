@@ -4,6 +4,7 @@ import asyncio
 from functools import partial
 from typing import Any
 import threading
+from collections.abc import Callable
 
 from hydra.utils import instantiate
 from omegaconf import DictConfig
@@ -20,6 +21,8 @@ from .model import RabbitHostConfig, QueueConfig
 from model import AgentRequest, AgentConfig, AgentResponse
 from agent import AgentHelper, GoogleGenContentRequest, GoogleLLM
 from database import PostgresHostConfig
+
+publish_response = Callable[[str|bytes, BasicProperties|None], None]
 
 logger = logging.getLogger(__name__)
 
@@ -275,7 +278,6 @@ class PikaConsumer(threading.Thread):
         super().__init__()
         self._appConfig:DictConfig = appConfig
         self._termSignal:threading.Event = threading.Event()
-        self._helper:AgentHelper = AgentHelper(appConfig)
 
         mockCall:bool = appConfig['google-genai']['mock']
         self._googleLLM:GoogleLLM = GoogleLLM(mockCall=mockCall)
@@ -317,10 +319,17 @@ class PikaConsumer(threading.Thread):
             await declare_exchange(channel, rabbitmqConfig.exchange['agent-response'])
 
             await declare_queue_and_dlq(channel, rabbitmqConfig['queue-and-binding']['agent-response'])
+
+            pub_resp_func:publish_response = partial(publish_message, channel=channel,
+                exchange=rabbitmqConfig.exchange['agent-response'],
+                routing_key=rabbitmqConfig['queue-and-binding']['agent-response'].routing_key)
+
+            helper:AgentHelper = AgentHelper(self._appConfig, pub_resp_func)
+
             async with asyncio.TaskGroup() as tg:
                 # define background tasks
                 bgTask = tg.create_task(self.backgroundTask(), name="backgroundTask")
-                googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(), name="googleBatchJobTask")
+                googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(helper), name="googleBatchJobTask")
                 consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['agent-request'].queue, tg, self.request_routing)
                 consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async'].queue, tg, self.google_generate_content)
                 consumer_tag = subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async-batch'].queue, tg, self.google_batch_job)
@@ -338,13 +347,13 @@ class PikaConsumer(threading.Thread):
             logger.debug("The self._termSignal has not activated sleep for %d sec...", interval)
             await asyncio.sleep(interval)
 
-    async def googleBatchJobBGTask(self, interval:float=60*5) -> None:
+    async def googleBatchJobBGTask(self, helper:AgentHelper, interval:float=60*5) -> None:
         """
         """
         pgHostConfig:PostgresHostConfig = instantiate(self._appConfig.postgres.connection)
         while not self._termSignal.is_set():
             logger.info("Check Google GenAI BatchJob state...")
-            await self._googleLLM.check_batchjob_state(pgHostConfig)
+            await helper.check_batchjob_state()
             await asyncio.sleep(interval)
 
 
@@ -353,9 +362,11 @@ class PikaConsumer(threading.Thread):
 
         agentConfig:AgentConfig = AgentConfig.load(self._appConfig, agentRequest.agentId)
 
+        helper:AgentHelper = AgentHelper(appConfig=self._appConfig)
+
         match agentConfig.provider:
             case "google-genai":
-                googleRequest:GoogleGenContentRequest = await self._helper.convert_request(agentConfig, agentRequest)
+                googleRequest:GoogleGenContentRequest = await helper.convert_request(agentConfig, agentRequest)
                 routing_key:str = f"{agentConfig.provider}-{agentConfig.mode}"
                 body:str = googleRequest.model_dump_json(indent=4)
             case _:
@@ -367,11 +378,10 @@ class PikaConsumer(threading.Thread):
     async def google_generate_content(self, channel:Channel, raw:bytes, props:BasicProperties) -> None:
         request:GoogleGenContentRequest = GoogleGenContentRequest.model_validate_json(raw)
 
-        agentConfig:AgentConfig = AgentConfig.load(self._appConfig, request.agentId)
-
         response:GenerateContentResponse = await self._googleLLM.create_content(request)
 
-        agentResponse:AgentResponse = await self._helper.save_google_response(agentConfig, request, response)
+        helper:AgentHelper = AgentHelper(appConfig=self._appConfig)
+        agentResponse:AgentResponse = await helper.save_google_response(request, response)
 
         exchange:str = self._appConfig.rabbitmq.exchange['agent-response']
         routing_key:str = self._appConfig.rabbitmq['queue-and-binding']['agent-response'].routing_key
@@ -384,6 +394,7 @@ class PikaConsumer(threading.Thread):
 
         batchjob:BatchJob = await self._googleLLM.create_content_batch(request)
 
-        await self._helper.save_google_batchjob(batchjob)
+        helper:AgentHelper = AgentHelper(appConfig=self._appConfig)
+        await helper.save_google_batchjob(batchjob)
 
     
