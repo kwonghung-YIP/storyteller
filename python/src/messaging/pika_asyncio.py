@@ -330,7 +330,7 @@ class PikaConsumer(threading.Thread):
             async with asyncio.TaskGroup() as tg:
                 # define background tasks
                 bgTask = tg.create_task(self.backgroundTask(tg), name="backgroundTask")
-                googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(helper), name="googleBatchJobTask")
+                googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(helper, 30), name="googleBatchJobTask")
                 consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['agent-request'].queue, tg, self.request_routing))
                 consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async'].queue, tg, self.google_generate_content))
                 consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async-batch'].queue, tg, self.google_batch_job))
