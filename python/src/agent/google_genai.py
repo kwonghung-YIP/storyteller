@@ -1,7 +1,6 @@
 import logging
 import os
 from pathlib import Path
-import json
 import re
 
 from pydantic import BaseModel
@@ -14,53 +13,35 @@ from database import Chat, open_session
 
 logger = logging.getLogger(__name__)
 
-mockPath = Path("/app/resources/mock/google-genai/")
-
-def load_latest_mock_response(mode:str, request:GoogleGenContentRequest) -> GenerateContentResponse:
+def load_latest_mock_response(mockPath:Path, request:GoogleGenContentRequest) -> GenerateContentResponse:
     filePrefix = f"{request.agentId}-{request.type}-gen-content-resp"
-    mockfiles = list((mockPath / mode).glob(f"{filePrefix}-*.json"))
+    mockfiles = list(mockPath.glob(f"{filePrefix}-*.json"))
     mockfiles.sort()
     if mockfiles:
         logger.info("Return generate_content mock response from:[%s]", mockfiles[-1])
         response = GenerateContentResponse.model_validate_json(mockfiles[-1].read_text())
         return response
 
-def save_response_to_mock(mode:str, request:AgentRequest, response:GenerateContentResponse) -> None:
-    filePrefix = f"{request.agentId}-{request.type}-gen-content-resp"
-
-    cnt:int = 1
-    mockfiles = list((mockPath / mode).glob(f"{filePrefix}-*.json"))
-    mockfiles.sort()
-    if mockfiles:
-        match = re.search(f"{filePrefix}-(\d+)", mockfiles[-1].stem)
-        cnt = int(match.group(1)) if match else 1
-        
-    mockJsonFile = mockPath / mode / f"{filePrefix}-{cnt+1:05d}.json"
-    with open(mockJsonFile, mode="w") as f:
-        f.write(response.model_dump_json(indent=4))
-
-def load_latest_mock_batchjob(mode:str, request:GoogleGenContentRequest) -> GenerateContentResponse:
+def load_latest_mock_batchjob(mockPath:Path, request:GoogleGenContentRequest) -> GenerateContentResponse:
     filePrefix = f"{request.agentId}-{request.type}-batch"
-    mockfiles = list((mockPath / mode).glob(f"{filePrefix}-*.json"))
+    mockfiles = list(mockPath.glob(f"{filePrefix}-*.json"))
     mockfiles.sort()
     if mockfiles:
         logger.info("Return batch job from:[%s]", mockfiles[-1])
         batchjob = BatchJob.model_validate_json(mockfiles[-1].read_text())
         return batchjob
 
-def save_batchjob_to_mock(mode:str, request:AgentRequest, batchJob:BatchJob) -> None:
-    filePrefix = f"{request.agentId}-{request.type}-batch"
-
+def save_result_to_mock(mockPath:Path, filePrefix:str, result:BaseModel) -> None:
     cnt:int = 1
-    mockfiles = list((mockPath / mode).glob(f"{filePrefix}-*.json"))
+    mockfiles = list(mockPath.glob(f"{filePrefix}-*.json"))
     mockfiles.sort()
     if mockfiles:
         match = re.search(f"{filePrefix}-(\d+)", mockfiles[-1].stem)
         cnt = int(match.group(1)) if match else 1
         
-    mockJsonFile = mockPath / mode / f"{filePrefix}-{cnt+1:05d}.json"
+    mockJsonFile = mockPath / f"{filePrefix}-{cnt+1:05d}.json"
     with open(mockJsonFile, mode="w") as f:
-        f.write(batchJob.model_dump_json(indent=4))
+        f.write(result.model_dump_json(indent=4))
 
 class GoogleGenContentRequest(AgentRequest):
     model:str
@@ -70,6 +51,7 @@ class GoogleGenContentRequest(AgentRequest):
 class GoogleLLM(BaseModel):
 
     mockCall:bool = True
+    mockPath:Path|None
 
     @staticmethod
     def load_apikey(envvar:str="GOOGLE_API_KEY", dockerSecretName:str="google-api-key") -> str|None:
@@ -117,8 +99,11 @@ class GoogleLLM(BaseModel):
         return target
 
     async def create_content(self, request:GoogleGenContentRequest) -> GenerateContentResponse:
+        
+        mockFilePrefix:str = f"{request.agentId}-{request.type}-gen-content-resp"
+
         if self.mockCall:
-            response:GenerateContentResponse = load_latest_mock_response('async', request)
+            response:GenerateContentResponse = load_latest_mock_response(self.mockPath / 'async', request)
         else:
             apikey:str = GoogleLLM.load_apikey()
             
@@ -130,14 +115,17 @@ class GoogleLLM(BaseModel):
                     contents = request.userPrompt,
                     config = request.config
                 )
-
-            save_response_to_mock('async', request, response)
+            
+            save_result_to_mock(self.mockPath / 'async', mockFilePrefix, response)
 
         return response
 
     async def create_content_batch(self, request:GoogleGenContentRequest) -> BatchJob:
+
+        mockFilePrefix:str = f"{request.agentId}-{request.type}-batch"
+
         if self.mockCall:
-            batchJob:BatchJob = load_latest_mock_batchjob('async-batch', request)
+            batchJob:BatchJob = load_latest_mock_batchjob(self.mockPAth / 'async-batch', request)
         else:
             apikey:str = GoogleLLM.load_apikey()
             
@@ -165,7 +153,7 @@ class GoogleLLM(BaseModel):
                     )
                 )
 
-            save_batchjob_to_mock('async-batch', request, batchJob)
+            save_result_to_mock(self.mockPath / 'async-batch', mockFilePrefix, batchJob)
 
         return batchJob
 

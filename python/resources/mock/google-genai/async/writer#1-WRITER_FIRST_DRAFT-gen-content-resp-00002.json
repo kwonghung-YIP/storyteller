@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 16:15:21 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=9104",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the shimmering, bubbly depths of Bikini Bottom, where laughter echoed like the chime of sea bells, lived SpongeBob SquarePants. His days were a whirlwind of Krabby Patty flips, jellyfishing expeditions, and the joyous clang of his spatula. But one day, as he was polishing the grill at the Krusty Krab, a whisper of a different kind of magic tickled his porous ears.\n\nIt wasn't the scent of frying patties, nor the grumbles of hungry patrons. It was a song, a melody so sweet and bright it seemed to sparkle with stardust. SpongeBob, his square-shaped head tilted in wonder, followed the sound to the surface, to the sandy shores where the ocean met the sky.\n\nAnd there, prancing on the foam-kissed waves, was a creature unlike any he had ever seen. It was a Little Pony, with a mane like spun moonlight and eyes that twinkled like the deepest sapphire. Her name, she introduced with a musical giggle, was Twinklehoof. She was from a faraway land, a place of rainbows and clouds, who had somehow found herself adventuring in the great blue sea.\n\nSpongeBob, usually brimming with chatter, found himself speechless. Twinklehoof’s hooves, as they touched the water, left trails of shimmering pixie dust. When she spoke, her voice was like the tinkling of wind chimes. She told him tales of meadows, of flying with wings of gossamer, and of friends who glowed with inner light.\n\nSpongeBob, in turn, described the thrill of a perfectly cooked Krabby Patty, the joy of a successful jellyfishing net, and the boisterous camaraderie of his friends, Patrick and Sandy. He learned that Twinklehoof loved the taste of sweet sea-berries and the feel of the sun warming her coat. He discovered that she, too, had a deep love for laughter, though hers was a gentle, melodious sound.\n\nAs days turned into weeks, SpongeBob found his heart doing a funny little flip-flop whenever Twinklehoof was near. He’d blush a brighter shade of yellow, his spatula would falter mid-air, and his usual boisterous greetings would turn into shy little squeaks. He loved the way her mane shimmered, the way her laughter bubbled up, and the kindness that shone in her sapphire eyes. He realized, with a jolt that was more exciting than a double-fry cook, that he was falling in love.\n\nBut how could a sea sponge and a land pony, from two entirely different worlds, ever truly be together? SpongeBob worried. He imagined Twinklehoof struggling to breathe underwater, or him gasping for air on land. The thought made his porous heart ache.\n\nOne day, Twinklehoof noticed SpongeBob’s quiet sadness. \"What troubles you, dear SpongeBob?\" she asked, her voice soft as a cloud.\n\nSpongeBob, gathering all his courage, confessed his fears. \"I love you, Twinklehoof,\" he began, his voice trembling, \"but we are so different! How can a fish love a pony?\"\n\nTwinklehoof nudged him gently with her nose. \"Oh, SpongeBob,\" she said, her eyes twinkling with understanding. \"Love isn't about being the same. It's about appreciating what makes us different and finding joy in what we share. You bring me laughter and adventure, and I bring you dreams of the sky. We don't need to change who we are to love each other.\"\n\nThen, Twinklehoof did something extraordinary. She spun around, her mane a dazzling swirl, and a gentle gust of wind lifted SpongeBob right into the air! He felt a strange, bubbly sensation, not of drowning, but of floating! Twinklehoof had a special magic, a kind that could adapt to her friends. For SpongeBob, it meant he could breathe a little bit of the air when he was with her, and for her, when she visited Bikini Bottom, she could swim with a lightness that surprised even herself.\n\nFrom that day on, SpongeBob and Twinklehoof’s love story became a legend whispered on the ocean currents and carried on the winds. They would meet at the shimmering shoreline, SpongeBob with his spatula ready for a joyful flip, and Twinklehoof with a song in her heart and a twinkle in her eye. They proved that even the most different of hearts, when filled with kindness and bravery, could find a way to sparkle together, like a rainbow meeting the sea.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "EOBHap7EMcP8kdUPtKbOmQo",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 953,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1851,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

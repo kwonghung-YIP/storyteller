@@ -23,3 +23,8 @@ postgres:
 
 google-genai:
   mock: false
+  mock-path: /home/hung/projects/storyteller/python/resources/mock/google-genai
+
+background-task:
+  google-batach-job:
+    interval: 300

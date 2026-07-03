@@ -5,6 +5,7 @@ from functools import partial
 from typing import Any
 import threading
 from collections.abc import Callable
+from pathlib import Path
 
 from hydra.utils import instantiate
 from omegaconf import DictConfig
@@ -280,7 +281,11 @@ class PikaConsumer(threading.Thread):
         self._termSignal:threading.Event = threading.Event()
 
         mockCall:bool = appConfig['google-genai']['mock']
-        self._googleLLM:GoogleLLM = GoogleLLM(mockCall=mockCall)
+        self._googleLLM:GoogleLLM = GoogleLLM(
+            mockCall=mockCall,
+            mockPath=Path(appConfig['google-genai']['mock-path']),
+        )
+
 
     def run(self) -> None:
         """
@@ -306,6 +311,9 @@ class PikaConsumer(threading.Thread):
         """
         rabbitmqConfig = self._appConfig.rabbitmq
         rabbitHost:RabbitHostConfig = instantiate(rabbitmqConfig.connection)
+
+        googleBatchJobBgTaskInterval:float = self._appConfig['background-task']['google-batach-job']['interval']
+
         async with openConnection(rabbitHost) as conn, openChannel(conn) as channel:
             await declare_exchange(channel, rabbitmqConfig.exchange['dead-letter-queue'])
 
@@ -330,7 +338,7 @@ class PikaConsumer(threading.Thread):
             async with asyncio.TaskGroup() as tg:
                 # define background tasks
                 bgTask = tg.create_task(self.backgroundTask(tg), name="backgroundTask")
-                googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(helper, 30), name="googleBatchJobTask")
+                googleBatchJobTask = tg.create_task(self.googleBatchJobBGTask(helper,googleBatchJobBgTaskInterval), name="googleBatchJobTask")
                 consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['agent-request'].queue, tg, self.request_routing))
                 consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async'].queue, tg, self.google_generate_content))
                 consumer_tags.append(subscribe_queue(channel, rabbitmqConfig['queue-and-binding']['google-genai-async-batch'].queue, tg, self.google_batch_job))
@@ -367,7 +375,10 @@ class PikaConsumer(threading.Thread):
         try:
             while not self._termSignal.is_set():
                 logger.info("Check Google GenAI BatchJob state...")
-                await helper.check_batchjob_state()
+                try:
+                    await helper.check_batchjob_state()
+                except Exception as err:
+                    logger.exception('Exception when checking Google Batch Job states %s', type(err))
                 await asyncio.sleep(interval)
         except asyncio.CancelledError:
             logger.info("Task [%s] has been cancelled.", myTask.get_name())
