@@ -14,7 +14,7 @@ from database import Chat, open_session
 
 logger = logging.getLogger(__name__)
 
-mockPath = Path("/home/hung/projects/storyteller/python/resources/mock/google-genai/")
+mockPath = Path("/app/resources/mock/google-genai/")
 
 def load_latest_mock_response(mode:str, request:GoogleGenContentRequest) -> GenerateContentResponse:
     filePrefix = f"{request.agentId}-{request.type}-gen-content-resp"
@@ -24,6 +24,20 @@ def load_latest_mock_response(mode:str, request:GoogleGenContentRequest) -> Gene
         logger.info("Return generate_content mock response from:[%s]", mockfiles[-1])
         response = GenerateContentResponse.model_validate_json(mockfiles[-1].read_text())
         return response
+
+def save_response_to_mock(mode:str, request:AgentRequest, response:GenerateContentResponse) -> None:
+    filePrefix = f"{request.agentId}-{request.type}-gen-content-resp"
+
+    cnt:int = 1
+    mockfiles = list((mockPath / mode).glob(f"{filePrefix}-*.json"))
+    mockfiles.sort()
+    if mockfiles:
+        match = re.search(f"{filePrefix}-(\d+)", mockfiles[-1].stem)
+        cnt = int(match.group(1)) if match else 1
+        
+    mockJsonFile = mockPath / mode / f"{filePrefix}-{cnt+1:05d}.json"
+    with open(mockJsonFile, mode="w") as f:
+        f.write(response.model_dump_json(indent=4))
 
 def load_latest_mock_batchjob(mode:str, request:GoogleGenContentRequest) -> GenerateContentResponse:
     filePrefix = f"{request.agentId}-{request.type}-batch"
@@ -117,7 +131,7 @@ class GoogleLLM(BaseModel):
                     config = request.config
                 )
 
-            self.save_response_to_mock(request, response)
+            save_response_to_mock('async', request, response)
 
         return response
 

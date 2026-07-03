@@ -39,3 +39,67 @@ services:
       - postgres:db
     depends_on:
       - postgres
+
+  init-volume:
+    image: alpine
+    volumes:
+      - python-hydra-output:/python/output/hydra
+      - python-mock-output:/python/output/mock
+    command: chown -R 888:888 /python/output
+
+  python-app:
+    container_name: python-app
+    user: "888:888"
+
+    profiles:
+      - python-local
+
+    build:
+      context: ../python
+      dockerfile: Dockerfile
+      args:
+        - MAIN_FILE=main.py
+    
+    environment:
+      UV_NO_DEV: 0
+      UV_NO_ENV_FILE: true
+      PYTHON_APP_PROFILE: compose
+    
+    secrets:
+      - google-api-key
+
+    volumes:
+      - python-hydra-output:/app/outputs
+      - python-mock-output:/app/resources/mock
+
+    # https://docs.docker.com/compose/how-tos/file-watch/
+    # https://docs.docker.com/reference/compose-file/develop/
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./src
+          target: /app
+          include:
+            - "*.py"
+          ignore:
+            - .venv/
+          initial_sync: true
+
+        - action: rebuild
+          path: uv.lock
+
+    depends_on:
+      rabbitmq:
+        # condition: service_started
+        condition: service_healthy
+        # condition: service_completed_successfully
+      init-volume:
+        condition: service_completed_successfully
+
+secrets:
+  google-api-key:
+    file: ./.google-api-key
+
+volumes:
+  python-hydra-output:
+  python-mock-output:

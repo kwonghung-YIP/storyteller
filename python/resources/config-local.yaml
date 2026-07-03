@@ -1,0 +1,25 @@
+defaults:
+  - _self_
+  - agent:
+    - editor#1
+    - writer#1
+  - rabbitmq:
+    - common
+  
+rabbitmq:
+  connection:
+    _target_: messaging.RabbitHostConfig
+    host: localhost
+    username: admin
+    password: passwd
+
+postgres:
+  connection:
+    _target_: database.PostgresHostConfig
+    host: localhost
+    username: admin
+    password: passwd
+    database: db1
+
+google-genai:
+  mock: false

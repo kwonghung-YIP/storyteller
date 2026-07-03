@@ -5,7 +5,7 @@ writer#1:
 
   provider: google-genai
 
-  mode: async-batch
+  mode: async
 
   model: gemini-2.5-flash-lite 
 

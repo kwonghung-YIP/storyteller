@@ -1,0 +1,34 @@
+exchange:
+  agent-request: "agent-request"
+  request-routing: "request-routing"
+  agent-response: "agent-response"
+  dead-letter-queue: "dead-letter-queue"
+
+queue-and-binding:
+  agent-request:
+    _target_: messaging.QueueConfig
+    queue: "agent-request"
+    exchange: ${rabbitmq.exchange.agent-request}
+    routing_key: "request"
+    dlq_exchange: ${rabbitmq.exchange.dead-letter-queue}
+
+  google-genai-async:
+    _target_: messaging.QueueConfig
+    queue: "google-genai-async"
+    exchange: ${rabbitmq.exchange.request-routing}
+    routing_key: "google-genai-async"
+    dlq_exchange: ${rabbitmq.exchange.dead-letter-queue}
+
+  google-genai-async-batch:
+    _target_: messaging.QueueConfig
+    queue: "google-genai-async-batch"
+    exchange: ${rabbitmq.exchange.request-routing}
+    routing_key: "google-genai-async-batch"
+    dlq_exchange: ${rabbitmq.exchange.dead-letter-queue}
+
+  agent-response:
+    _target_: messaging.QueueConfig
+    queue: "agent-response"
+    exchange: ${rabbitmq.exchange.agent-response}
+    routing_key: "response"
+    dlq_exchange: ${rabbitmq.exchange.dead-letter-queue}

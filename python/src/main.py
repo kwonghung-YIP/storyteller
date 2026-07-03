@@ -4,6 +4,7 @@ from omegaconf import DictConfig
 from threading import Thread
 import signal
 from functools import partial
+import os
 
 from messaging import PikaConsumer
 
@@ -27,12 +28,16 @@ def joinThreads(threadPool:list[Thread],timeout:float) -> None:
                 thread.join(timeout)
     logger.info("All threads stopped.")
 
-@hydra.main(config_path="../resources", config_name="config")
+profile = os.getenv("PYTHON_APP_PROFILE","local")
+rootConfig:str=f"config-{profile}"
+
+@hydra.main(config_path="../resources", config_name=rootConfig)
 def main(config:DictConfig) -> None:
     """
     Keep the main thread running until all child thread completed.
     """
     logger.info("Start main....")
+    logger.info("PYTHON_APP_PROFILE:%s", profile)
     try:
         pikaConsumer: PikaConsumer = PikaConsumer(config)
         threadPool:list[Thread] = [pikaConsumer]
