@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:36:24 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=7319",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the shimmering, bubbly depths of Bikini Bottom, where pineapple houses stood tall and jellyfish floated like ethereal balloons, lived SpongeBob SquarePants. SpongeBob was a sponge of boundless joy, whose laughter echoed through the coral reefs and whose optimism could make even grumpy Squidward crack a smile (occasionally). His days were filled with the sizzle of Krabby Patties at the Krusty Krab, games of jellyfishing with his best friend Patrick, and the warm glow of friendship.\n\nOne day, a most unusual shimmer, unlike any bioluminescent plankton or passing whale, drifted down from the world above. It wasn't water-borne; it was a cascade of sparkling, rainbow dust that settled gently upon the ocean floor. And with it came a creature so wondrous, SpongeBob’s porous little heart did a flip-flop.\n\nFloating serenely amongst the anemones was a creature of pure light and vibrant color. She was a Little Pony, with a mane like spun moonlight and a coat that shimmered with every hue imaginable. Her eyes, large and gentle, sparkled like the most precious pearls. Her name, whispered on the currents, was Celestia.\n\nSpongeBob had never seen anything so beautiful. The Little Pony seemed to radiate a gentle magic, a softness that made the usually boisterous Bikini Bottom feel calm and hushed. He watched, mesmerized, as she explored the reef, her hooves leaving faint trails of stardust that quickly dissolved into the water.\n\nHis usual energetic greetings felt a little too… loud. His laughter, normally a cheerful boom, seemed too much. He felt a fluttery feeling in his chest, a feeling that was both exciting and a little bit shy. He wanted to talk to her, to ask her about her world, but his words seemed to get stuck in his throat.\n\nPatrick, ever the observant friend (when he wasn't distracted by a shiny rock), noticed SpongeBob’s unusual quietness. \"SpongeBob, why aren't you doing your happy dance? Did Squidward steal all your joy again?\"\n\nSpongeBob just pointed, his voice a mere whisper. \"Patrick... look.\"\n\nPatrick squinted. \"Whoa! Is that a really sparkly jellyfish? Can we catch it?\"\n\n\"No, Patrick!\" SpongeBob squeaked, a spark of protectiveness igniting within him. \"She's… she's different.\"\n\nCelestia, sensing the curious eyes upon her, turned. She saw SpongeBob, his square face beaming with a gentle admiration, and Patrick, looking slightly confused but ready to follow SpongeBob’s lead. A soft, musical neigh, like tiny bells tinkling, filled the water.\n\nSpongeBob, gathering every ounce of his courage, took a deep breath that filled his porous body. He waddled a little closer, his smile wide but gentle. \"H-hello,\" he stammered, his voice softer than a sea cucumber’s sigh. \"I'm SpongeBob! And this is Patrick! Welcome to Bikini Bottom!\"\n\nCelestia dipped her head gracefully. A trail of rainbow dust swirled around her, and a gentle, warm light emanated from her. She didn't speak in words, not like SpongeBob did. Instead, a feeling washed over SpongeBob – a feeling of warmth, curiosity, and a touch of wonder. It was as if she understood him without needing to hear every word.\n\nFrom that day on, SpongeBob found himself drawn to where Celestia floated. He learned that she couldn't swim as he did, but she could glide and shimmer, her presence bringing a magical calm to the reef. He would bring her the most beautiful, iridescent shells he could find, not to give away, but just to show her. He would tell her stories of his adventures, his voice soft and full of a new kind of tenderness.\n\nHe discovered that his jellyfishing nets were too rough for her delicate mane, so he would just watch her dance amongst the glowing jellyfish, his heart full. He even found himself sharing his perfectly cooked Krabby Patties, though Celestia, of course, didn't eat them. She would simply nuzzle his hand, her magical aura making the simple act feel like the grandest gesture.\n\nSpongeBob realized that love wasn't always about boisterous laughter or grand adventures. Sometimes, it was about quiet admiration, gentle gestures, and the shared feeling of wonder. He knew they were different, a sponge from the sea and a pony from… somewhere else entirely. But when Celestia’s gentle glow met his earnest smile, SpongeBob felt the most magical, bubbly, and wonderful feeling of all. He was in love, and in Bikini Bottom, even the most unexpected hearts could find their sparkle.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "YTlIat-YDIejxN8PlI6imQg",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 991,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1889,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

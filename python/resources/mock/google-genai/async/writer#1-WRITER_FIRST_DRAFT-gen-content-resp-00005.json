@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:50:58 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=4454",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the shimmering, bubble-filled world of Bikini Bottom, lived a sponge named SpongeBob. He was a sponge of boundless energy and a heart as yellow as the sun. SpongeBob loved his job at the Krusty Krab, flipping Krabby Patties with a joyous flip of his spatula. He loved his best friend, Patrick Star, and his grumpy neighbor, Squidward. But SpongeBob’s heart, much like a fizzy soda pop, held a secret bubbling excitement.\n\nOne day, while exploring the sandy floor near a mysterious glowing coral reef, SpongeBob stumbled upon something quite extraordinary. It wasn't a rare jellyfish or a lost spatula, but a shimmering, rainbow-colored portal. Curiosity, as it often did, tugged at SpongeBob's square pants. With a brave little squeak, he bounced through.\n\nHe landed not on soft sand, but on something soft and grassy, under a sky painted with the most vibrant hues he had ever seen. And all around him, prancing and playing, were creatures like he'd never imagined! They had sleek coats that shimmered like dew on a petal, flowing manes and tails like silken rainbows, and on their foreheads, a single, spiraling horn that pulsed with a gentle, milky light. These were the ponies of Everbloom Meadow.\n\nSpongeBob, usually the most boisterous creature in Bikini Bottom, found himself speechless. He watched, wide-eyed, as one pony, with a coat the color of a sunset and a mane like spun starlight, galloped towards him. Her horn glowed a little brighter, and her eyes, big and deep like pools of twilight, twinkled with curiosity.\n\n\"Oh my,\" SpongeBob finally managed, his voice a little wobbly. \"You're… you're so sparkly!\"\n\nThe pony nuzzled his side gently. Her name, he would soon learn, was Celestia. She didn't speak in words, but in feelings. SpongeBob felt a warmth spread through him, a feeling of being seen and welcomed. It was like the first bite of a perfect Krabby Patty, but even better.\n\nFrom that day on, SpongeBob visited Everbloom Meadow whenever the portal shimmered open. He’d bring Celestia the juiciest, most colorful sea anemones he could find, and she’d show him how to leap over rainbows that arched across the meadow. He learned that Celestia, though she couldn't flip Krabby Patties, had a magic all her own. Her horn could make flowers bloom in an instant, and her presence made everyone around her feel happier, just like his Krabby Patties did for the citizens of Bikini Bottom.\n\nOne afternoon, as they sat by a waterfall that sang a tinkling tune, SpongeBob felt a familiar, bubbly feeling swell in his chest. He looked at Celestia, at her gentle eyes and the way her mane caught the sunlight.\n\n\"Celestia,\" he said, his voice soft. \"I think… I think I’m in love with you.\"\n\nCelestia nudged his cheek, and her horn glowed with a soft, rosy light. SpongeBob understood. It was a feeling of deep affection, of shared joy, and of a bond that sparkled brighter than any gem in the ocean.\n\nTheir worlds were different, as different as the sea and the sky. But in the quiet moments, under the glow of Celestia’s horn and the gentle lapping of the ocean waves, SpongeBob knew that love, like a good Krabby Patty, could come in the most unexpected and wonderful forms. And for a little sponge who loved everyone and everything, falling in love with a little pony was perhaps the most magical adventure of all.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "zjxIavCaG8PlnsEPu4DQyAc",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 779,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1677,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

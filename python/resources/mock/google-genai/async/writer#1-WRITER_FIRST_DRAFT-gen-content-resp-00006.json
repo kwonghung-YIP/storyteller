@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:51:51 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=5122",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the shimmering, bubbly depths of Bikini Bottom lived SpongeBob SquarePants, a porous fry cook whose laughter echoed like a thousand tiny bubbles popping. His days were a joyful blur of flipping Krabby Patties and exploring the coral reefs with his best friend, Patrick Star. But one day, while collecting jellyfish with his trusty net, SpongeBob saw something that made his square heart do a flip-flop.\n\nFloating gently on an iridescent current was a creature unlike any he'd ever seen. It was a pony, but not just any pony. This pony had a coat the color of a sunset, with a mane and tail spun from moonlight. Her hooves sparkled like tiny disco balls, and a single, pearly horn spiraled from her forehead. She was a Little Pony, a creature of dreams from a world far beyond the ocean's surface.\n\nSpongeBob, usually a chatterbox of nautical nonsense, found himself speechless. He’d never felt quite like this before. His yellow cheeks flushed a deeper shade of yellow. He felt a strange bubbling sensation in his stomach, a feeling much tamer than indigestion but far more delightful. Could this be… love?\n\nThe Little Pony, whose name was Starlight Glimmer, looked at SpongeBob with wide, curious eyes. She’d been exploring the wondrous, watery world with a touch of magic, and had found herself a little lost. She’d never encountered a talking sponge before, and his enthusiastic waves and cheerful squeaks were quite charming.\n\n\"Oh, my!\" exclaimed SpongeBob, finding his voice. \"You're the most beautiful creature I've ever seen! Are you… are you a sea unicorn?\"\n\nStarlight Glimmer giggled, a sound like tiny bells. \"I'm a pony, and this is my horn! I'm Starlight Glimmer. And you are?\"\n\n\"SpongeBob SquarePants! And this,\" he gestured wildly with his net, \"is Bikini Bottom! The finest city under the sea!\"\n\nThey spent the afternoon together. SpongeBob showed Starlight the best spots for jellyfish catching (though she preferred to admire their gentle glow), the tastiest kelp patches (which she politely declined), and the most hilarious antics of Squidward Tentacles (which made Starlight giggle even harder). SpongeBob found himself captivated by her grace, her kindness, and the way her horn seemed to twinkle when she smiled. He loved hearing about her world of friendship and magic, and she was delighted by his boundless optimism and his ability to make even the simplest things an adventure.\n\nAs the sun began to dip below the waves, casting long, shimmering shadows, Starlight knew she had to find her way back home. A pang of sadness touched SpongeBob’s porous heart. He didn’t want her to leave.\n\n\"Will you… will you come back?\" he asked, his voice a little wobbly.\n\nStarlight nudged him gently with her sparkly muzzle. \"If magic allows, and friendship calls, I will always try, SpongeBob.\" She then whispered a soft incantation, and her horn glowed with a gentle light. A shimmering portal, like a rainbow made of water, opened before her.\n\nWith a final, wistful wave, Starlight Glimmer stepped through. SpongeBob watched until the portal shimmered and vanished, leaving only the gentle sway of the ocean. He still had his trusty net, and the memory of flipping Krabby Patties, but now he also had a new feeling in his heart – a hope, as bright and shimmering as Starlight Glimmer's mane. And he knew, with all his squareness, that he would always be looking for that magical, rainbow portal, just in case his Little Pony friend decided to visit Bikini Bottom again.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Aj1IauzyBOPinsEPhsGRyQQ",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 786,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1684,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 23:10:57 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=7290",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the sun-dappled depths of Bikini Bottom, where pineapple houses dotted the seabed and kelp forests swayed like emerald curtains, lived a sponge named SpongeBob SquarePants. SpongeBob was, as you might imagine, a rather extraordinary sponge. His laughter bubbled like a fizzy soda, his optimism shone brighter than a jellyfish’s bioluminescence, and his heart, well, his heart was as vast and deep as the ocean itself.\n\nOne breezy afternoon, while SpongeBob was practicing his spatula flips outside the Krusty Krab, a most peculiar sight shimmered into view. It wasn't a boatmobile, nor a submarine, nor even a particularly large clam. It was a creature of pure, ethereal beauty, with a coat like spun moonlight and a mane that flowed like a waterfall of starlight. Her hooves, delicate and pearl-white, barely seemed to touch the sandy bottom as she pranced with an otherworldly grace. This was Starlight, a little pony from a land far beyond the coral reefs, a land whispered about in legends as Equestria.\n\nSpongeBob, usually brimming with a million questions and an even million more greetings, found himself speechless. His square little body tingled, not with the usual excitement of a new customer, but with a feeling entirely new and wonderfully bewildering. His normally bright yellow hue deepened to a shade of rosy blush.\n\nStarlight, sensing the tiny creature’s awe, dipped her head. Her eyes, the color of a twilight sky, held a gentle curiosity. \"Hello,\" she chimed, her voice like the tinkling of tiny bells.\n\n\"H-h-hello!\" SpongeBob finally managed, his voice a little squeaky. \"Welcome to Bikini Bottom! Are you… are you a… a sea-pony? But you’re not wet!\"\n\nStarlight gave a soft, musical laugh. \"I am a pony,\" she explained. \"And this is a magical cloak that allows me to visit your world. My name is Starlight.\"\n\nSpongeBob’s eyes widened like saucers. \"A magical cloak! Oh, wowee! And Starlight! That’s a beautiful name, like the stars in the sky at night, only you’re here, in the ocean!\" He clasped his hands together. \"I’m SpongeBob! And this is the Krusty Krab, the finest underwater restaurant in the whole wide ocean! Would you like a Krabby Patty? They’re made with love and… and secret ingredients!\"\n\nStarlight’s ears twitched with interest. She’d never tasted anything from another world before. \"I would be delighted, SpongeBob,\" she said.\n\nAs SpongeBob presented her with a perfectly grilled Krabby Patty, he watched Starlight take her first bite. Her eyes sparkled with delight. \"Oh, this is… extraordinary!\" she exclaimed. \"It’s so… savory and warm!\"\n\nFrom that moment on, Bikini Bottom, and SpongeBob’s heart, were never quite the same. Starlight would visit, her magical cloak shimmering, and SpongeBob would beam, his spatula ready for more flips of affection. They’d share Krabby Patties and stories, SpongeBob telling tales of the Jellyfish Fields and Squidward’s clarinet solos, Starlight describing meadows of flowers that glowed and adventures with her pony friends.\n\nSpongeBob found himself doing little things for Starlight. He’d polish the brightest shells he could find to make a path for her, gather the most shimmering sea pearls as gifts, and practice his most joyful laughs just to see her ears perk up. He loved the way her mane would swirl around her as she moved, the gentle glow she seemed to emit, and the kindness that shone from her eyes. It was a love as vast and deep as the ocean, a love that made his absorbent body feel lighter than seafoam.\n\nOne day, as the sunbeams slanted through the water, Starlight looked at SpongeBob with a bittersweet expression. \"SpongeBob,\" she said softly, \"my magical cloak is fading. I must return to my own world soon.\"\n\nSpongeBob’s cheerful grin faltered. His yellow face seemed to dim a little. \"Return? But… but I love it when you’re here, Starlight! My heart does flip-flops just thinking about you!\"\n\nStarlight nudged him gently with her muzzle. \"And I love visiting you, SpongeBob. You have a heart of pure gold, and your joy is like sunshine. Even when we are apart, the memories we've made will sparkle as brightly as the stars.\" She then explained that true friendship, and love, could bridge any distance, even between land and sea, or Bikini Bottom and Equestria.\n\nSpongeBob, though a little sad, understood. He knew that even if he couldn't see her, he would always remember Starlight. He promised to keep the Krabby Patties extra delicious, just in case she ever found a way back. And Starlight, with a final, gentle nuzzle, turned and shimmered away, leaving behind only the faint scent of stardust and a very happy, very in-love, sponge.\n\nAnd so, SpongeBob SquarePants, the little sponge from Bikini Bottom, carried the memory of the little pony from Equestria in his heart, a reminder that love, in all its wonderful and magical forms, can be found in the most unexpected places, even at the bottom of the sea.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "ekFIasTiOKD8nsEPqJDLmQc",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 1143,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2041,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:47:02 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=4194",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "Once upon a time, in the sparkling, bubbly waters of Bikini Bottom, lived a little sponge named SpongeBob. He was an exceptionally cheerful and absorbent fellow, known for his love of jellyfishing, his Krabby Patty-flipping skills, and his unwavering optimism. SpongeBob’s laughter was as bright and bouncy as bubbles rising to the surface.\n\nOne day, a shimmering portal, swirling with colours like a rainbow made of sea foam, opened near the Jellyfish Fields. Out tumbled a creature unlike any SpongeBob had ever seen. It was a little pony, with a coat the colour of a sunset, a mane like spun starlight, and eyes that twinkled with kindness. This was Starlight Glimmer, a kind and wise pony from a land of magic and wonder, who had accidentally stumbled through the portal.\n\nSpongeBob, usually quite startled by new things, found himself captivated. He had never seen anything so… *sparkly*! He bounced closer, his square pants flapping with excitement. \"Wowee!\" he exclaimed, his voice a high-pitched squeak. \"You're the most dazzling creature I've ever laid my eyes on!\"\n\nStarlight Glimmer, a little bewildered by the talking sponge, blinked her large, gentle eyes. \"Oh, hello there,\" she said softly, her voice like the tinkling of tiny bells. \"I seem to have gotten myself a bit lost.\"\n\nSpongeBob’s heart, usually filled with a simple joy for everyday things, felt a new kind of flutter. It was like a school of tiny seahorses doing a jig in his chest. He couldn't explain it, but he felt an overwhelming urge to make Starlight Glimmer happy. He wanted to show her the best of Bikini Bottom.\n\n\"Lost? Not for long!\" SpongeBob declared, puffing out his chest. \"I'm SpongeBob SquarePants, and I know this place like the back of my… well, my absorbent hand! I'll show you around! We can go jellyfishing! Or, uh, have Krabby Patties! Or maybe… maybe we can just sit and talk about your sparkly mane!\"\n\nStarlight Glimmer giggled, a sound that made SpongeBob’s knees feel like wobbly jelly. \"That sounds lovely, SpongeBob,\" she replied.\n\nAnd so, their unlikely friendship began. SpongeBob, the cheerful sea sponge, and Starlight Glimmer, the magical land pony, explored Bikini Bottom together. SpongeBob learned about Starlight's world of friendship and magic, and Starlight was enchanted by SpongeBob’s boundless enthusiasm and his unique way of seeing the good in everything.\n\nSpongeBob found himself looking forward to their time together more than anything. He’d practice his best smiles and try to tell his funniest jokes, hoping to see that special twinkle in Starlight's eyes. He even tried to do a little jig, though his square shape made it more of a wobble. He knew, deep in his porous heart, that this feeling was something special. He was falling in love, not just with Starlight's beauty, but with her kindness, her wisdom, and the way she made him feel like the most important sponge in the entire ocean.\n\nTheir story was a testament that friendship, and even love, can blossom in the most unexpected places, between the most different of creatures, proving that a kind heart and a happy bubble can connect any two souls, whether they swim or gallop.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "4jtIasb5Ify-vdIPrsyIsAk",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 728,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1626,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

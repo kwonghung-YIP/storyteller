@@ -27,4 +27,4 @@ google-genai:
 
 background-task:
   google-batach-job:
-    interval: 300
+    interval: 60

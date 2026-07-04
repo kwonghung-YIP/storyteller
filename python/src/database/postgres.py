@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 async def create_engine(postgres_url:str) -> AsyncGenerator[Any,Any,Any]:
     try:
         logger.info("create AsyncEngine for Postgres DB...")
-        engine:AsyncEngine = create_async_engine(postgres_url, echo=True)
+        engine:AsyncEngine = create_async_engine(postgres_url, echo=False)
         yield engine
     except Exception as err:
         raise err

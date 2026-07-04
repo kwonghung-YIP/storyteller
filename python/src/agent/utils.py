@@ -67,11 +67,11 @@ class AgentHelper:
         return target
     
 
-    async def save_google_response(self, request:AgentRequest, response: GenerateContentResponse) -> None:
+    async def save_google_response(self, request:AgentRequest, response: GenerateContentResponse) -> AgentResponse:
         async with open_session(self._pgHostConfig) as session:
-            self.save_google_response_internal(session, request, response)
+            return await self.save_google_response_internal(session, request, response)
 
-    async def save_google_response_internal(self, session:AsyncSession, request:AgentRequest, response: GenerateContentResponse) -> None:
+    async def save_google_response_internal(self, session:AsyncSession, request:AgentRequest, response: GenerateContentResponse) -> AgentResponse:
 
         config:AgentConfig = AgentConfig.load(agentId=request.agentId, config=self._appConfig)
 

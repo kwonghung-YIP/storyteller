@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 23:41:24 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=10070",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the sparkling, sun-drenched waters of Bikini Bottom, lived SpongeBob SquarePants, a fry cook with a laugh as bubbly as a soda and a heart as big as the ocean. His days were usually filled with flipping Krabby Patties, jellyfishing with Patrick, and annoying his grumpy neighbor, Squidward. But one day, a most peculiar, and rather sparkly, thing happened.\n\nA shimmering portal, like a kaleidoscope made of stardust, swirled open above the Krusty Krab. From it tumbled not a jellyfish, not a rogue Krabby Patty, but something entirely new. It was a creature of pure, vibrant color, with a mane like spun rainbow silk and eyes that twinkled like freshly polished stars. She landed with a soft *thump* right in front of SpongeBob, who was busy wiping down the counter.\n\n“Oh, barnacles!” exclaimed SpongeBob, his square eyes wide with surprise.\n\nThe creature, who introduced herself as Prismia, was a Little Pony from a land called Equestria. She had accidentally galloped too close to a magical portal and found herself far from home. Prismia was unlike anyone SpongeBob had ever met. She didn’t talk about kelp or coral. She spoke of friendship, kindness, and the joy of making things beautiful. Her hooves seemed to dance as she walked, leaving tiny trails of glitter that Sparkled on the ocean floor.\n\nSpongeBob was utterly captivated. He had never seen such a bright, joyful creature. Prismia, in turn, was fascinated by SpongeBob’s boundless enthusiasm. She’d never met anyone who could find so much delight in a simple task like flipping a burger.\n\n“Your… your spatula work is like a ballet!” Prismia exclaimed, her voice like tinkling bells. “And your laugh! It’s so… *zesty*!”\n\nSpongeBob’s cheeks, which were usually bright yellow, turned a rosy pink. “Why, thank you, Prismia! You… you have the most amazing colors I’ve ever seen! They’re brighter than any jellyfish I’ve ever caught!”\n\nHe found himself wanting to show her everything. He took her jellyfishing, though Prismia was a little hesitant about the stinging tentacles. SpongeBob, with his swift movements and knowing the best spots, expertly guided her away from the dangers, showing her how to catch them safely with his trusty net. He even tried to teach her how to blow bubbles, but Prismia’s breath was too gentle, and the bubbles just floated away like tiny, iridescent balloons.\n\nOne afternoon, while they were sitting on a bed of soft sea anemones, SpongeBob felt a strange flutter in his chest. It was a feeling he’d never experienced before. When Prismia would smile, his heart would do a little flip. When she’d giggle, he felt warm all over, like he’d just eaten a dozen Krabby Patties.\n\n“Prismia,” he began, his voice a little shaky, “I… I think I really like you.”\n\nPrismia tilted her head, her starlike eyes curious. “Like me? You mean, like how you like Krabby Patties?”\n\nSpongeBob blushed deeper. “Well, yes, I *really* like Krabby Patties. But this is… this is different. This is… like wanting to share every sunrise with you. Like wanting to make you laugh every single day. It’s… it’s like my heart has grown an extra bubble, and it’s all because of you!”\n\nPrismia’s eyes widened, and a soft blush spread across her own colorful coat. She understood. In her land, this feeling was called “love.”\n\n“Oh, SpongeBob,” she whispered, her voice full of warmth. “I feel it too! Your kindness, your laughter… it makes my whole world feel brighter, even without the sun of my home. I think… I think I love you too.”\n\nThey spent many happy days together. SpongeBob learned to appreciate the beauty of a perfectly formed cloud, and Prismia learned the exquisite joy of a perfectly cooked Krabby Patty (though she mostly just admired SpongeBob making them). He showed her the wonders of Bikini Bottom, and she showed him how to find the magic in even the simplest things.\n\nBut the portal that brought Prismia to Bikini Bottom was unstable. One day, it began to shimmer and swell again. Prismia knew it was time to go home. A tear, like a tiny diamond, welled up in her eye.\n\n“Oh, SpongeBob,” she said, her voice sad. “I have to go back.”\n\nSpongeBob’s cheerful demeanor faltered. “But… but I don’t want you to leave! Who will I share my bubble-blowing adventures with? Who will tell me my spatula work is like a ballet?”\n\nPrismia nudged him gently with her nose. “Don’t worry, SpongeBob. We will always have our memories. And perhaps, if the magic is strong enough, the portal will open again someday.” She gave him a final, loving nuzzle. “And remember, true friendship, and love, can sparkle across any distance.”\n\nWith a final, wistful look at SpongeBob, Prismia stepped into the swirling portal. It closed with a gentle *poof*, leaving only a faint scent of rainbow and a sprinkle of glitter on the ocean floor.\n\nSpongeBob stood there for a moment, a little sad but also filled with a new understanding. He had felt the magic of love, and it was a beautiful, albeit sometimes bittersweet, thing. He looked at the remaining glitter, a reminder of his colorful friend. He knew that even though Prismia was gone, the love he felt for her would stay in his heart, making every Krabby Patty he flipped, and every jellyfish he caught, just a little bit more sparkly. And he couldn’t wait for the day, if it ever came, when the kaleidoscope portal might shimmer open again.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "m0hIaqylB-PinsEPhsGRyQQ",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 1261,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2159,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

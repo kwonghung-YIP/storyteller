@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:58:18 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=7364",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the bubbly depths of Bikini Bottom, where pineapple houses dotted the seabed and jellyfish fields shimmered with bioluminescent glow, lived a sponge named Spongebob Squarepants. Spongebob was known for his infectious laugh, his unwavering optimism, and his legendary Krabby Patties. But one day, a splash of vibrant color, unlike anything Bikini Bottom had ever seen, drifted down from the surface.\n\nIt was a tiny, shimmering creature, with a mane like spun moonlight and eyes that twinkled like the finest sea-gems. She had delicate wings that pulsed with rainbow hues and hooves that tapped a soft rhythm on the sandy floor. This was Lumina, a little pony from a world of clouds and sunshine, who had somehow found herself lost in the ocean.\n\nSpongebob, on his way to work at the Krusty Krab, stumbled upon Lumina near the coral reefs. He’d never seen anything so… *sparkly*. His absorbent little heart did a flip-flop, a sensation as foreign and exciting as a jellyfish sting.\n\n\"Oh, hello there!\" Spongebob chirped, his voice full of his usual boundless enthusiasm, but with a new, fluttery undertone. \"I've never seen a… a shimmer-pony before! Are you lost?\"\n\nLumina, a little frightened but drawn to Spongebob’s genuine kindness, nodded shyly. Her voice, when she spoke, was like tiny bells chiming. \"I… I think I am. One moment I was prancing through the sky, and the next, I was… here.\"\n\nSpongebob, forgetting all about his shift, found himself utterly captivated. Lumina’s gentle nature, the way her wings shimmered when she blinked, the sweet scent of stardust that seemed to cling to her – it was all so enchanting. He wanted to know everything about her. He offered her a ride on his spatula, hoping to show her the wonders of Bikini Bottom.\n\n\"This is my home!\" Spongebob exclaimed, pointing out the bustling town, the bubbling kelp forests, and the majestic, if slightly grumpy, Squidward Tentacles’ moai-head house. Lumina, perched carefully on his spatula, giggled, her laughter like a cascade of tiny pearls.\n\nAs they explored, Spongebob noticed how different they were. He was porous and yellow, she was ethereal and iridescent. He loved Krabby Patties, she seemed to nibble on dewdrops. But the more time they spent together, the more Spongebob realized that differences didn't matter. He loved the way Lumina’s wings would flutter when she was happy, and she adored Spongebob’s boundless energy and his warm, bubbly personality.\n\nOne day, while they were watching the jellyfish dance in the twilight, Spongebob felt a courageous bubble of bravery rise within him. \"Lumina,\" he began, his voice a little shaky, \"I… I think I'm falling in love with you. You're the most wonderful, sparkly, magical creature I've ever met.\"\n\nLumina’s eyes widened, her rainbow wings giving a soft, delighted tremor. \"Oh, Spongebob!\" she whispered, her voice filled with warmth. \"I think I'm falling in love with you too. Your heart is as bright and as warm as the sun, even down here in the sea.\"\n\nTheir love was a quiet, gentle thing, like the glow of sea anemones. Spongebob learned to be more serene, enjoying the quiet moments watching the bubbles drift. Lumina found joy in Spongebob’s simple pleasures, the taste of a perfectly made Krabby Patty (he’d learned to make a special, airy version for her), and the sound of his laughter echoing through the underwater world.\n\nOf course, their love wasn’t without its challenges. How could a little pony from the sky truly belong in the ocean? And how could a sponge, so firmly rooted in Bikini Bottom, ever join her in the clouds?\n\nOne evening, as they sat by the glowing bioluminescent coral, Lumina sighed. \"My family must be so worried. I don't know how to get back home.\"\n\nSpongebob’s cheerful demeanor faltered for a moment. He didn't want Lumina to leave. But then, he remembered something his wise friend Sandy Cheeks always said: \"Every problem has a solution if you just think outside the box… or in this case, outside the bubble!\"\n\nHe gathered his friends: Patrick, Sandy, and even a surprisingly helpful Squidward (for a small bribe of Krabby Patties). Together, they devised a plan. Sandy, with her scientific genius, created a special, shimmering bubble-suit for Lumina, strong enough to carry her back to the surface. Spongebob, with his boundless love, filled the suit with the happiest, most buoyant bubbles he could blow.\n\nAs Lumina prepared to ascend, her eyes, full of tears and starlight, met Spongebob’s. \"I will never forget you, my dear Spongebob,\" she whispered.\n\n\"And I'll never forget you, my sparkly Lumina!\" Spongebob replied, his voice cracking a little. \"Just know, the Krusty Krab will always be open for you, and my heart will always be waiting!\"\n\nWith a gentle beat of her wings, Lumina rose, a streak of rainbow against the deep blue. Spongebob watched until she was a tiny, twinkling speck, disappearing into the vast expanse of the ocean’s surface.\n\nThough Lumina returned to her home in the clouds, their love story wasn't over. Lumina would often send down shimmering dewdrops that would land on Spongebob’s pineapple house, a reminder of their time together. And Spongebob, whenever he saw a particularly bright star in the night sky, would blow a happy bubble, knowing that somewhere, his little pony was smiling. Their love was a testament to the fact that even the most different hearts could find a way to beat as one, a love as sweet and enduring as the deepest ocean and as bright as the highest cloud.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "gz5IaorAAfeyxN8PrPGRyQM",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 1308,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2206,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:58:54 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=4764",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "Once upon a time, in the shimmering, bubbly depths of Bikini Bottom, lived a sponge named SpongeBob. He was a sponge of boundless energy and even more boundless optimism, his laugh like the popping of a thousand tiny bubbles. SpongeBob’s days were usually filled with flipping Krabby Patties at the Krusty Krab, jellyfishing with his best pal Patrick, and generally making every moment a little bit brighter.\n\nBut one day, a most peculiar thing happened. A swirling portal, shimmering with colors SpongeBob had never seen, blinked into existence right above the pineapple he called home. Out tumbled a creature of pure magic, a being of dazzling hues and a mane like spun starlight. It was a Little Pony, a Fluttershy, from a land far beyond the sea.\n\nFluttershy was as gentle as a sea breeze and as timid as a hermit crab peeking out from its shell. She had never seen anything like SpongeBob – a porous, yellow creature bobbing in the water! And SpongeBob? Well, his square little eyes went wide as saucers. He had seen many wonders in his ocean life, from the majestic whale sharks to the grumpy ol' Mr. Krabs, but never had he beheld such a creature of delicate grace and vibrant sparkle.\n\n“Oh my,” SpongeBob squeaked, his voice full of awe. “You’re… you’re the most beautiful thing I’ve ever seen!”\n\nFluttershy, startled, hid behind a large, shimmering piece of coral. Her heart, usually as quiet as a sleeping starfish, began to thump like a drum. No one had ever spoken to her with such genuine delight.\n\nSpongeBob, noticing her shyness, immediately softened. He remembered how shy he could get when he met new people, like when he first tried to get a driver's license. “Don’t worry!” he chirped, his voice as friendly as a warm tide. “I’m SpongeBob! I love to laugh, I love to cook, and I *love* to make friends!”\n\nHe then did something truly SpongeBob-esque. He gathered a bouquet of the most luminous, phosphorescent anemones he could find and, with a careful flourish, presented them to Fluttershy. They glowed with soft, internal light, a little piece of the ocean’s magic just for her.\n\nFluttershy, peeking out from behind the coral, saw the glowing flowers and SpongeBob’s earnest, smiling face. A tiny, hopeful smile bloomed on her own face. Slowly, tentatively, she stepped forward and accepted the anemones. They felt warm and alive in her hooves.\n\nFrom that day on, an unlikely friendship, and perhaps something more, began to blossom. SpongeBob, who always thought he knew every wonderful thing the ocean had to offer, discovered a whole new kind of wonder in Fluttershy. He found himself looking forward to the days when the portal shimmered, bringing his magical friend to visit. He loved hearing about her land of meadows and rainbows, and she, in turn, was fascinated by the bustling, vibrant world of Bikini Bottom.\n\nSpongeBob learned that love wasn’t always loud and boisterous like his own laugh. Sometimes, it was quiet and gentle, like the way Fluttershy would hum a soft melody when she felt happy. And Fluttershy learned that love could also be full of fun and silliness, as she giggled at SpongeBob’s cartwheels and jellyfishing adventures.\n\nTheir love was as strange and beautiful as a rainbow appearing in the deepest ocean trench, a testament to the fact that hearts, no matter how different they beat, can find a magical rhythm together. And so, the porous sponge and the starry-maned pony proved that even in the most unexpected of places, true connection, and a special kind of love, could always be found.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "qT5IaumWJsPlnsEPu4DQyAc",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 798,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 1696,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

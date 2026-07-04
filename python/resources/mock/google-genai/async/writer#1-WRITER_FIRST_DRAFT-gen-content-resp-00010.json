@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:57:50 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=7922",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "In the sparkling, bubbly world of Bikini Bottom, lived a fry cook named SpongeBob SquarePants. SpongeBob loved his job at the Krusty Krab, loved his pet snail Gary, and loved jellyfishing with his best friend Patrick. But one day, while exploring a particularly shimmering coral reef, SpongeBob saw something that made his porous heart skip a beat – a little pony!\n\nNow, this wasn't just any pony. This was Starlight Glimmer, a pony from the magical land of Equestria, who had accidentally tumbled through a shimmering portal. Starlight Glimmer had a coat the color of a twilight sky, a mane like spun moonlight, and eyes that twinkled with the wisdom of a thousand stars. She was trying to find her way back home, but everything was so strange and… wet!\n\nSpongeBob, usually so full of boisterous energy, found himself standing perfectly still, his square face blushing a faint shade of pink. He had never seen anything so beautiful! He watched as Starlight Glimmer, with a gentle neigh, tried to tiptoe through the sand, her delicate hooves sinking a little.\n\nGathering all his courage, SpongeBob swam forward. \"Hello there!\" he chirped, his voice a little squeakier than usual. \"Are you lost?\"\n\nStarlight Glimmer turned, her large eyes widening. \"Oh, my! You can talk? And you're... square?\"\n\n\"I'm SpongeBob SquarePants!\" he declared, puffing out his chest. \"And this is Bikini Bottom. It’s not exactly Equestria, but we have the best Krabby Patties this side of the ocean!\"\n\nStarlight Glimmer giggled, a sound like tiny bells. \"I'm Starlight Glimmer. And yes, I am quite lost. I don't know how to get back to my friends.\"\n\nSpongeBob’s mind raced. He wanted to help Starlight Glimmer, but how could a sea sponge help a magical pony? He thought of all the adventures he’d had, all the times he’d solved problems with his friends. \"Don't you worry, Starlight Glimmer!\" he said with a determined grin. \"We'll figure this out together!\"\n\nAnd so began an unlikely friendship. SpongeBob showed Starlight Glimmer around Bikini Bottom. He introduced her to the wondrous sights – the bubbling kelp forests, the shimmering schools of fish, and even the terrifying, yet majestic, giant tube worms. Starlight Glimmer, in turn, told SpongeBob tales of friendship, magic, and the harmonious land of Equestria.\n\nSpongeBob found himself constantly thinking about Starlight Glimmer. He’d imagine her bright, starry eyes and the graceful way she moved. He even tried to practice his best smile, the one that made the Krabby Patty customers beam, just for her. He realized he was feeling a new kind of bubbly joy whenever she was near, a feeling he'd never experienced before. He thought it might be what the grown-ups called… falling in love.\n\nOne afternoon, as they sat on a giant clam shell, SpongeBob, his voice trembling slightly, said, \"Starlight Glimmer, I… I really like being your friend. You’re the most wonderful creature I’ve ever met, and I’ve met a lot of creatures!\" He took a deep breath. \"I think… I think I’m falling in love with you.\"\n\nStarlight Glimmer looked at SpongeBob, her expression soft. She nuzzled his square head gently with her muzzle. \"Oh, SpongeBob,\" she said kindly. \"You are very sweet, and I do cherish our friendship. You have shown me such kindness and bravery. But my home is in Equestria, and my magic, and yours, belong there. True love, for me, is about being with those who understand my world.\"\n\nSpongeBob’s heart sank a little, but he understood. He knew Starlight Glimmer’s magic and heart belonged in her own world. \"I understand,\" he said, a small smile returning. \"And I’ll help you get back to Equestria, even if it means saying goodbye.\"\n\nTogether, they sought the help of Sandy Cheeks, the brilliant squirrel scientist. Sandy, with her ingenious inventions and Starlight Glimmer’s innate magical knowledge, worked tirelessly. Finally, they managed to create a shimmering, swirling portal, exactly like the one Starlight Glimmer had fallen through.\n\nAs the portal pulsed with light, Starlight Glimmer turned to SpongeBob. \"Thank you, my dear SpongeBob,\" she said, her voice full of gratitude. \"You have been the kindest friend anyone could ask for. Never stop being your wonderful, square self.\"\n\nWith a final, gentle neigh, Starlight Glimmer stepped through the portal, disappearing back to her own magical land.\n\nSpongeBob watched until the portal faded, a single tear rolling down his cheek. He was sad, but also filled with a warm glow. He had helped a friend, learned about a new kind of feeling, and discovered that even though his heart was a little bit broken, it was also bigger and stronger for having loved. He might not have found a pony to keep, but he had found a wonderful adventure and a treasured memory, and that, he knew, was pretty magical too. And as he swam back to the Krusty Krab, he hummed a little tune, ready to make the best Krabby Patties Bikini Bottom had ever seen, with a heart full of starlight.",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "Zj5IaquZGsD_nsEP8aLdsQI",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 1186,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2084,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

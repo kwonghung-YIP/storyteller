@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:59:49 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=7530",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "Ah, a tale of unexpected affections and a splash of shimmering magic! While SpongeBob SquarePants and the land of Equestria are worlds apart, let us weave a story that bridges the bubbly depths of Bikini Bottom with the pastel skies of pony-kind.\n\nHere is a draft for you, a story about how a certain porous fry cook found his heart fluttering in a most unusual direction:\n\n***\n\n**The Sponge Who Dreamed of Rainbows**\n\nSpongeBob SquarePants was, by all accounts, the happiest fry cook in Bikini Bottom. His laugh was a bubbly cascade, his spatula a trusty companion, and the Krabby Patty his masterpiece. But lately, even the sizzle of the grill and the cheerful bellow of \"I'm ready!\" felt a little… flat. A peculiar longing had begun to bubble inside him, a feeling as soft and swirling as sea foam.\n\nOne particularly sunny afternoon, while attempting to catch a jellyfish with his trusty net, SpongeBob found himself drawn to an unusual shimmer on the horizon. It wasn't the usual gleam of coral or the glint of a discarded bottle cap. This shimmer was like a thousand tiny rainbows dancing on the water’s surface. Curiosity, as it often did, led SpongeBob on an adventure.\n\nHe swam and swam, his yellow form bobbing with each ripple, until he found himself at the edge of an ocean trench so deep, it seemed to kiss the sky. And there, perched on a floating island of phosphorescent sea kelp, was the source of the shimmer.\n\nIt was a creature unlike any SpongeBob had ever seen. It had a coat of the softest, pearlescent white, with a mane and tail that flowed like spun moonlight. But what truly caught SpongeBob’s breath, and sent a most peculiar fizzing sensation through his sponge body, were the magnificent wings that shimmered with all the colors of a sunset. And attached to her hooves were tiny, tinkling bells that chimed with every graceful movement.\n\nThis was not a fish, nor a jellyfish, nor even a grumpy squid. This was… a pony. A *flying* pony from a land beyond the sea, a land whispered about in ancient nautical tales as Equestria.\n\nThe little pony, who introduced herself with a tinkling giggle as \"Celestia’s Little Star,\" looked down at SpongeBob with eyes as big and blue as the deepest ocean. She had never seen a creature quite like him – so square and yellow, and seemingly made of sponge!\n\n\"Oh, my!\" Celestia's Little Star exclaimed, her voice like the gentle chime of wind bells. \"What a curious little… square thing you are!\"\n\nSpongeBob’s porous cheeks turned a shade brighter than his usual yellow. \"I… I'm SpongeBob SquarePants, ma'am! And you… you’re the most beautiful creature I’ve ever seen!\"\n\nAnd just like that, a most improbable affection began to blossom. SpongeBob, the fry cook who lived for Krabby Patties, found himself daydreaming of rainbow wings and tinkling hooves. He would spend his lunch breaks gazing at the surface, hoping for another glimpse of his shimmering friend.\n\nCelestia’s Little Star, in turn, was utterly fascinated by SpongeBob's world. He told her tales of the Krusty Krab, of Gary the Snail’s purrs, and of Patrick’s… well, of Patrick. She told him about sunrises that painted the sky and friendship that could move mountains.\n\nOne day, SpongeBob, emboldened by a particularly delicious Krabby Patty, decided to confess his feelings. He fashioned a bouquet of the brightest, most phosphorescent anemones he could find and swam to the edge of the trench.\n\n\"Celestia’s Little Star,\" he began, his voice wobbling like a jelly, \"I… I think I've fallen in love with you.\"\n\nCelestia's Little Star tilted her head, her rainbow mane catching the light. She didn't understand \"love\" quite like SpongeBob did. In her world, it was about friendship, kindness, and sharing. But she felt a warm, happy flutter when she saw SpongeBob, and her bells seemed to chime a little brighter whenever he was near.\n\n\"Oh, SpongeBob!\" she chirped, nudging his head gently with her nose. \"That’s very… bubbly of you! I like you very much too. You make me want to sing when I see you!\"\n\nSpongeBob’s heart did a happy little flip. It wasn't quite the grand romantic declaration he’d imagined, but it was *something*. He realized that perhaps love, like a good Krabby Patty, could be made in many different ways.\n\nTheir friendship continued, a delightful blend of the deep blue sea and the bright blue sky. SpongeBob learned to appreciate the beauty of a rainbow, and Celestia's Little Star learned the joy of a perfectly flipped Krabby Patty (though she couldn't quite eat it, of course!).\n\nAnd so, in the vast, magical world, the sponge who dreamed of rainbows and the little pony with wings that shimmered found a unique and wonderful connection, proving that sometimes, the most unexpected friendships can be the most magical of all.\n\n***",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "3j5IasHALfmunsEP8tLw0AI",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 1111,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2009,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

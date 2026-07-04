@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 22:58:40 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=7140",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "Oh, a fairy tale, you say? And one that brings together the bubbly charm of Bikini Bottom with the rainbow-hued wonder of Equestria! What a delightful combination! Let me put on my thinking cap, dip my quill in starlight ink, and weave a tale for you.\n\nHere is a draft, keeping in mind the magic, the lessons, and the joy of a good story:\n\n***\n\n**The Krabby Patty Heart and the Sparklehoof**\n\nIn the sun-dappled, bubbly depths of the ocean, where laughter echoed like popping bubbles, lived a certain fry cook named SpongeBob SquarePants. SpongeBob loved many things: his job at the Krusty Krab, jellyfishing with Patrick, and the delightful *sizzle* of a perfectly cooked Krabby Patty. His heart, much like his absorbent body, was full of boundless enthusiasm and a capacity for great affection.\n\nOne shimmering, phosphorescent evening, as SpongeBob was polishing his spatulas until they gleamed like tiny suns, a most peculiar shimmer appeared above the coral. It wasn't the usual shimmer of a jellyfish's glow, nor the glint of a passing sea anemone. This shimmer pulsed with colours SpongeBob had never seen in the sea – soft pinks, sky blues, and a radiant, shimmering gold.\n\nSuddenly, with a gentle *thump* and a swirl of rainbow light, a creature landed on the sandy ocean floor right outside the Krusty Krab. She was unlike any creature SpongeBob had ever encountered. Her coat was the colour of a sunset cloud, a soft, rosy hue. A mane and tail flowed like spun moonlight, cascading in waves of violet and silver. And from her forehead, a single, pearly horn spiraled towards the surface. She had delicate hooves that clicked softly on the sand, and eyes that sparkled like the deepest, clearest sea gems.\n\n\"Whoa!\" gasped SpongeBob, his square eyes widening to the size of dinner plates. \"You're… you're a Pony of the Sea! Or maybe a Sea Pony of the Sky!\"\n\nThe creature, who was a little unicorn named Twilight Sparkle, looked around, a little dazed. She had been experimenting with a new teleportation spell, a spell meant for land, and it seemed to have taken a rather… *aquatic* turn. \"Oh dear,\" she murmured, her voice like the tinkling of tiny bells. \"This doesn't look like Ponyville at all.\"\n\nSpongeBob, ever the welcoming host, scurried out. \"Welcome! Welcome! Are you lost? Do you need a Krabby Patty? They're extra special today! Mr. Krabs added a secret ingredient: pure joy!\"\n\nTwilight Sparkle looked at SpongeBob, so eager and bright, with his cheerful grin and his bubbly demeanor. She had never met anyone quite like him. His enthusiasm was infectious, and the way he spoke of \"joy\" as an ingredient made her curious. \"A Krabby Patty?\" she asked, tilting her head. \"I… I don't know if I can eat underwater. I'm not quite equipped for it.\"\n\nSpongeBob’s face fell for a moment, but then his optimism returned. \"No problem! We can… uh… we can share! You can have the *smell* of the Krabby Patty, and I'll have the taste! And we can talk about everything!\"\n\nAnd so, they did. Twilight Sparkle, despite her predicament, found herself enchanted by SpongeBob’s stories of Bikini Bottom, his jellyfishing adventures, and the silly antics of his friends. SpongeBob, in turn, was captivated by Twilight Sparkle’s tales of friendship, magic, and the beautiful land of Equestria. He learned about bravery from Rainbow Dash, kindness from Fluttershy, and the importance of laughter from Pinkie Pie. Twilight Sparkle learned about dedication from SpongeBob’s tireless work at the Krusty Krab and the simple, pure joy he found in making others happy.\n\nAs the days turned into nights, and the phosphorescent glow of the ocean deepened, SpongeBob felt a new kind of warmth bloom in his chest, a feeling softer than the gentle sway of seaweed, and more exciting than a jellyfishing expedition. It was a feeling that made his porous heart do a little flutter-kick. He found himself looking forward to Twilight Sparkle's visits, his every day brighter with the thought of her tinkling laughter.\n\nOne afternoon, as they watched a school of angelfish dance in the currents, SpongeBob, in his usual direct way, blurted out, \"Twilight Sparkle, I… I think I've fallen in love with your sparklehoof! Your magic horn! Your… your everything!\"\n\nTwilight Sparkle blinked, her gem-like eyes widening in surprise, then softening with a gentle smile. She had felt a connection to SpongeBob too, a unique and wonderful friendship that was blossoming into something more. His pure heart and unwavering positivity were like a warm ray of sunshine even in the ocean depths.\n\n\"SpongeBob,\" she said, her voice soft and musical, \"your heart is as vast and bright as the ocean, and your kindness is more magical than any spell I know. I… I believe I love your cheerful grill-flip and your brave, bubbly spirit too!\"\n\nTheir love was as unconventional as a rainbow appearing underwater. But in the grand tapestry of fairy tales, love often finds the most unexpected and wonderful forms. SpongeBob and Twilight Sparkle learned that true connection wasn't about where you lived, or what you were made of, but about the spark of joy and kindness you shared. And though they were from different worlds, their hearts, one porous and full of joy, the other filled with the magic of friendship, beat together in a beautiful, bubbly, and sparkling rhythm. And sometimes, just sometimes, if you looked very closely, you might even see a faint shimmer of rainbow light dancing amongst the ocean bubbles, a testament to the love that bloomed between a fry cook and a unicorn.\n\n***\n\nWhat do you think? Does this tale capture the spirit you were imagining? We can always add more jellyfishing, or perhaps a visit to Ponyville if you like!",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "mT5IarmiEvylnsEPpOKS2Ag",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 1308,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 898,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 898
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 2206,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

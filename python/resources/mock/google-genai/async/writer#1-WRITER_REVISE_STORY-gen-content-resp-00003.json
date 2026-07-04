@@ -1,0 +1,79 @@
+{
+    "sdk_http_response": {
+        "headers": {
+            "x-gemini-service-tier": "standard",
+            "content-type": "application/json; charset=UTF-8",
+            "vary": "Origin, X-Origin, Referer",
+            "content-encoding": "gzip",
+            "date": "Fri, 03 Jul 2026 23:41:55 GMT",
+            "server": "scaffolding on HTTPServer2",
+            "x-xss-protection": "0",
+            "x-frame-options": "SAMEORIGIN",
+            "x-content-type-options": "nosniff",
+            "server-timing": "gfet4t7; dur=5504",
+            "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+            "transfer-encoding": "chunked"
+        },
+        "body": null
+    },
+    "candidates": [
+        {
+            "content": {
+                "parts": [
+                    {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": "{\n  \"story\": \"In the sparkling, sun-drenched waters of Bikini Bottom, lived SpongeBob SquarePants. His laugh was as bubbly as a soda, and his heart was as big as the ocean. Most days were spent flipping Krabby Patties at the Krusty Krab, jellyfishing with Patrick, and trying, usually in vain, to get a smile out of his grumpy neighbor, Squidward.\\n\\nBut one day, a most peculiar, and rather sparkly, thing happened.\\n\\nAbove the Krusty Krab, the water rippled and swirled. A shimmering portal, like a kaleidoscope made of stardust, spun open! From it tumbled not a rogue Krabby Patty or a stray jellyfish, but something entirely new. It landed with a soft *thump* right at SpongeBob\\u2019s feet.\\n\\nSpongeBob froze, his spatula forgotten mid-flip. His square eyes widened. Jaw slightly slack, he just stared.\\n\\nBefore him stood a creature of pure, vibrant color. Her mane flowed like spun rainbow silk, and her eyes twinkled like freshly polished stars. She looked around, a little unsteady on her hooves, her expression uncertain.\\n\\n\\u201cOh, barnacles!\\u201d SpongeBob finally managed, his voice a squeak.\\n\\nThe creature blinked, then offered a gentle smile. \\u201cHello?\\u201d she said, her voice like tinkling bells. \\u201cI seem to be a bit lost.\\u201d\\n\\nShe introduced herself as Prismia. She was a Little Pony from a land far away. She\\u2019d been exploring, perhaps a little too close to a strange, shimmering gateway, and now\\u2026 now she found herself in a world of water and coral. Prismia looked around, her star-bright eyes taking in the strange, bubbly surroundings with a mix of wonder and confusion.\\n\\nSpongeBob was utterly captivated. He had never seen such a bright, joyful creature, even if she did look a little bewildered. Prismia, in turn, was fascinated by SpongeBob\\u2019s boundless enthusiasm. She\\u2019d never met anyone who could find so much delight in a simple task like flipping a burger.\\n\\n\\u201cYour spatula work!\\u201d Prismia exclaimed, her hooves tapping lightly on the sandy floor. \\u201cIt\\u2019s like a dance! And your laugh! It\\u2019s so\\u2026 *zesty*!\\u201d\\n\\nSpongeBob\\u2019s usually bright yellow cheeks turned a rosy pink. \\u201cWhy, thank you, Prismia! You\\u2026 you have the most amazing colors I\\u2019ve ever seen! They\\u2019re brighter than any jellyfish I\\u2019ve ever caught!\\u201d\\n\\nHe couldn\\u2019t wait to show her everything! He took her jellyfishing, but Prismia was a little hesitant about the stinging tentacles. With a quick *whoosh* and a clever flick of his net, SpongeBob expertly guided her away from any danger, showing her how to catch them safely. He even tried to teach her how to blow bubbles. But Prismia\\u2019s breath was too gentle. The bubbles just floated away like tiny, iridescent balloons, too shy to grow large.\\n\\nOne afternoon, while they were sitting on a bed of soft, swaying sea anemones, SpongeBob felt a strange flutter in his chest. It was a new feeling, warm and wobbly. When Prismia would smile, his heart would do a little flip. When she\\u2019d giggle, he felt warm all over, like he\\u2019d just eaten a dozen Krabby Patties.\\n\\n\\u201cPrismia,\\u201d he began, his voice a little shaky, \\u201cI\\u2026 I think I really like you.\\u201d\\n\\nPrismia tilted her head, her starlike eyes curious. \\u201cLike me? You mean, like how you like Krabby Patties?\\u201d\\n\\nSpongeBob blushed deeper. \\u201cWell, yes, I *really* like Krabby Patties. But this is\\u2026 this is different. This is like wanting to share every sunrise with you. Like wanting to make you laugh every single day. It\\u2019s\\u2026 it\\u2019s like my heart has grown an extra bubble, and it\\u2019s all because of you!\\u201d\\n\\nPrismia\\u2019s eyes widened, and a soft blush spread across her own colorful coat. She understood. This feeling, this special sparkle that made her heart sing with joy and warmth\\u2026 in her home, they called this powerful friendship magic.\\n\\n\\u201cOh, SpongeBob,\\u201d she whispered, her voice full of warmth. \\u201cI feel it too! Your kindness, your laughter\\u2026 it makes my whole world feel brighter. I think\\u2026 I think this magic makes me love you too.\\u201d\\n\\nThey spent many happy days together. SpongeBob learned to appreciate the beauty of a perfectly formed cloud, and Prismia learned the exquisite joy of a perfectly cooked Krabby Patty (though she mostly just admired SpongeBob making them). He showed her the wonders of Bikini Bottom, and she showed him how to find the magic in even the simplest things.\\n\\nBut the portal that brought Prismia to Bikini Bottom was unstable. One day, it began to shimmer and swell again, growing larger and brighter. Prismia knew it was time to go home. A tear, like a tiny diamond, welled up in her eye.\\n\\n\\u201cOh, SpongeBob,\\u201d she said, her voice sad. \\u201cThe gateway is open again. I have to go back.\\u201d\\n\\nSpongeBob\\u2019s cheerful demeanor faltered. \\u201cBut\\u2026 but I don\\u2019t want you to leave! Who will I share my bubble-blowing adventures with? Who will tell me my spatula work is like a ballet?\\u201d\\n\\nPrismia nudged him gently with her nose. \\u201cDon\\u2019t worry, SpongeBob. We will always have our memories. And perhaps, if the magic is strong enough, the portal will open again someday.\\u201d She gave him a final, loving nuzzle. \\u201cAnd remember, true friendship, and love, can sparkle across any distance.\\u201d\\n\\nWith a final, wistful look at SpongeBob, Prismia stepped into the swirling portal. It closed with a gentle *poof*, leaving only a faint scent of rainbow and a sprinkle of glitter on the ocean floor.\\n\\nSpongeBob stood there for a moment, a little sad but also filled with a new, warm feeling. He looked at the remaining glitter, a reminder of his colorful friend. He knew that even though Prismia was gone, the love he felt for her would stay in his heart, making every Krabby Patty he flipped, and every jellyfish he caught, just a little bit more sparkly. And he couldn\\u2019t help but hope that one day, the kaleidoscope portal might shimmer open again.\"\n}",
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                    }
+                ],
+                "role": "model"
+            },
+            "citation_metadata": null,
+            "finish_message": null,
+            "token_count": null,
+            "finish_reason": "STOP",
+            "grounding_metadata": null,
+            "avg_logprobs": null,
+            "index": 0,
+            "logprobs_result": null,
+            "safety_ratings": null,
+            "url_context_metadata": null
+        }
+    ],
+    "create_time": null,
+    "model_version": "gemini-2.5-flash-lite",
+    "prompt_feedback": null,
+    "response_id": "vUhIavGZOdzYkdUP5oWwqAQ",
+    "usage_metadata": {
+        "cache_tokens_details": null,
+        "cached_content_token_count": null,
+        "candidates_token_count": 1745,
+        "candidates_tokens_details": null,
+        "prompt_token_count": 7794,
+        "prompt_tokens_details": [
+            {
+                "modality": "TEXT",
+                "token_count": 7794
+            }
+        ],
+        "thoughts_token_count": null,
+        "tool_use_prompt_token_count": null,
+        "tool_use_prompt_tokens_details": null,
+        "total_token_count": 9539,
+        "traffic_type": null
+    },
+    "model_status": null,
+    "automatic_function_calling_history": [],
+    "parsed": null
+}

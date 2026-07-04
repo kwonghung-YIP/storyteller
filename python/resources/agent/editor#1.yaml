@@ -1,9 +1,11 @@
 editor#1:
+  _target_: model.AgentConfig
+
   id: editor#1
 
   provider: google-genai
 
-  mode: async
+  mode: async-batch
   
   model: gemini-2.5-flash-lite 
 
