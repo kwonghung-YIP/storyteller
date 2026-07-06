@@ -53,6 +53,7 @@ services:
 
     profiles:
       - python-local
+      - local
 
     build:
       context: ../python
@@ -95,6 +96,19 @@ services:
         # condition: service_completed_successfully
       init-volume:
         condition: service_completed_successfully
+
+  spring-boot:
+    profiles:
+      - spring-boot
+      - local
+    image: stroyteller:0.0.1-SNAPSHOT
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=compose
+    depends_on:
+      python-app:
+        condition: service_started
 
 secrets:
   google-api-key:
