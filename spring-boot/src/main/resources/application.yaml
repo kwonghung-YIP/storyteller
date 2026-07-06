@@ -1,0 +1,59 @@
+spring:
+  application:
+    name: Storyteller
+
+  profiles:
+    default: local
+
+  jpa:
+    generate-ddl: true
+
+messaging:
+  rabbitmq:
+    outbound:
+      agent-request:
+        exchange: agent-request
+        routing-key: request
+        queue: agent-request
+    inbound:
+      agent-response:
+        exchange: agent-response
+        routing-key: response
+        queue: agent-response
+---
+spring:
+  config:
+    activate:
+      on-profile:
+        - local
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db1
+    username: admin
+    password: passwd
+
+  rabbitmq:
+    # addresses: amqp://admin:passwd@localhost:5672/
+    host: localhost
+    port: 5672
+    username: admin
+    password: passwd
+
+---
+spring:
+  config:
+    activate:
+      on-profile:
+        - compose
+
+  datasource:
+    url: jdbc:postgresql://postgres:5432/db1
+    username: admin
+    password: passwd
+
+  rabbitmq:
+    # addresses: amqp://admin:passwd@localhost:5672/
+    host: rabbitmq
+    port: 5672
+    username: admin
+    password: passwd
