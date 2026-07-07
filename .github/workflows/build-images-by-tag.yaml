@@ -71,7 +71,7 @@ jobs:
 
       - name: Extract Image Name and Tag
         run: |
-          echo "IMAGE_NAME=ghcr.io/${{ github.repository }}/spring-boot-flow" >> $GITHUB_ENV
+          echo "IMAGE_NAME=https://ghcr.io/${{ github.repository }}/spring-boot-flow" >> $GITHUB_ENV
           echo "IMAGE_TAG=${{ github.event.inputs.image_tag }}" >> $GITHUB_ENV
 
       # Run the Spring Boot Buildpack wrapper
@@ -82,7 +82,7 @@ jobs:
           cd spring-boot
           pwd
           mvn spring-boot:build-image \
-            -Dspring-boot.build-image.imageName=https://ghcr.io${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
+            -Dspring-boot.build-image.imageName=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
             -Dspring-boot.build-image.publish=true \
             -Dspring-boot.build-image.docker.publishRegistry.username=${{ github.actor }} \
             -Dspring-boot.build-image.docker.publishRegistry.password=${{ secrets.GITHUB_TOKEN }} \
