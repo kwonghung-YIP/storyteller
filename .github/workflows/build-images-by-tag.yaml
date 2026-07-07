@@ -69,10 +69,11 @@ jobs:
           distribution: 'oracle'
           cache: 'maven'
 
+      # a valid image name format: '[domainHost:port/][path/]name[:tag][@digest]' (with 'path' and 'name' containing only [a-z0-9][.][_][-]) 
       - name: Extract Image Name and Tag
         run: |
-          echo "IMAGE_NAME=ghcr.io/${{ github.repository }}/spring-boot-flow" >> $GITHUB_ENV
-          echo "IMAGE_TAG=${{ github.event.inputs.image_tag }}" >> $GITHUB_ENV
+          echo "IMAGE_NAME=`echo "ghcr.io/${{ github.repository }}/spring-boot-flow" | tr '[:upper:]' '[:lower:]'`" >> $GITHUB_ENV
+          echo "IMAGE_TAG=`echo "${{ github.event.inputs.image_tag }}" | tr '[:upper:]' '[:lower:]'`" >> $GITHUB_ENV
 
       # Run the Spring Boot Buildpack wrapper
       - name: Build image with Maven Buildpack
