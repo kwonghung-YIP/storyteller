@@ -1,0 +1,65 @@
+services:
+  python-app:
+    container_name: python-app
+    user: "888:888"
+
+    profiles:
+      - with-local-build
+
+    build:
+      context: ../python
+      dockerfile: Dockerfile
+      args:
+        - MAIN_FILE=main.py
+    
+    environment:
+      UV_NO_DEV: 0
+      UV_NO_ENV_FILE: true
+      PYTHON_APP_PROFILE: compose
+    
+    secrets:
+      - google-api-key
+
+    volumes:
+      - python-hydra-output:/app/outputs
+      - python-mock-output:/app/resources/mock
+
+    # https://docs.docker.com/compose/how-tos/file-watch/
+    # https://docs.docker.com/reference/compose-file/develop/
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./src
+          target: /app
+          include:
+            - "*.py"
+          ignore:
+            - .venv/
+          initial_sync: true
+
+        - action: rebuild
+          path: uv.lock
+
+    depends_on:
+      rabbitmq:
+        # condition: service_started
+        condition: service_healthy
+        # condition: service_completed_successfully
+      init-volume:
+        condition: service_completed_successfully
+
+  spring-boot:
+    profiles:
+      - with-local-build
+
+    image: stroyteller:0.0.1-SNAPSHOT
+    container_name: spring-boot
+
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=compose
+
+    depends_on:
+      python-app:
+        condition: service_started

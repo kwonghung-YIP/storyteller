@@ -1,0 +1,44 @@
+services:
+  python-app:
+    profiles:
+      - with-github-images
+
+    image: ghcr.io/kwonghung-yip/storyteller/python-agent:${RELEASE_VERSION:-v0.1.1}
+    container_name: python-app
+    user: "888:888"
+    
+    environment:
+      UV_NO_DEV: 0
+      UV_NO_ENV_FILE: true
+      PYTHON_APP_PROFILE: compose
+    
+    secrets:
+      - google-api-key
+
+    volumes:
+      - python-hydra-output:/app/outputs
+      - python-mock-output:/app/resources/mock
+
+    depends_on:
+      rabbitmq:
+        # condition: service_started
+        condition: service_healthy
+        # condition: service_completed_successfully
+      init-volume:
+        condition: service_completed_successfully
+
+  spring-boot:
+    profiles:
+      - with-github-images
+
+    image: ghcr.io/kwonghung-yip/storyteller/spring-boot-flow:${RELEASE_VERSION:-v0.1.1}
+    container_name: spring-boot
+
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=compose
+
+    depends_on:
+      python-app:
+        condition: service_started
