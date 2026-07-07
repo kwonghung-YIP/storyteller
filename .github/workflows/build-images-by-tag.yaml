@@ -1,0 +1,64 @@
+name: Build Python & Spring-Boot images while tag
+
+on:
+  #push:
+  #  tags:
+  #    - 'v*'
+  workflow_dispatch:
+    inputs:
+      image_tag:
+        description: 'Image tag (e.g., v1.0.0, latest)'
+        required: true
+        default: 'latest'
+
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  build-and-push-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in into GitHub Container Registry (GHCR)
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository }}
+          #tags: |
+          #  type=ref,event=tag
+          tags: |
+            type=raw,value=${{ github.event.inputs.image_tag }}
+
+      # Set up Java environment AND specify the exact Maven version you want
+      - name: Set up JDK 25 & Maven CLI
+        uses: actions/setup-java@v4
+        with:
+          java-version: '25'
+          distribution: 'oracle'
+          cache: 'maven'
+          # Opt-in to managing Maven through this action
+          maven-version: '3.9.16'
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+      - run: |
+          java -version
+          mvn -version
+
