@@ -82,7 +82,7 @@ jobs:
           cd spring-boot
           pwd
           mvn spring-boot:build-image \
-            -Dspring-boot.build-image.imageName=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
+            -Dspring-boot.build-image.imageName=https://ghcr.io${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
             -Dspring-boot.build-image.publish=true \
             -Dspring-boot.build-image.docker.publishRegistry.username=${{ github.actor }} \
             -Dspring-boot.build-image.docker.publishRegistry.password=${{ secrets.GITHUB_TOKEN }} \
