@@ -61,16 +61,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Extract metadata
-        id: meta
-        uses: docker/metadata-action@v5
-        with:
-          images: ghcr.io/${{ github.repository }}/spring-boot-flow
-          #tags: |
-          #  type=ref,event=tag
-          tags: |
-            type=raw,value=${{ github.event.inputs.image_tag }}
-
       # Set up Java environment AND specify the exact Maven version you want
       - name: Set up JDK 25 & Maven CLI
         uses: actions/setup-java@v4
@@ -78,10 +68,23 @@ jobs:
           java-version: '25'
           distribution: 'oracle'
           cache: 'maven'
-          # Opt-in to managing Maven through this action
-          maven-version: '3.9.16'
 
-      - run: |
+      - name: Set lowercase repository name env
+        run: |
+          echo "IMAGE_NAME=ghcr.io/${{ github.repository }}/spring-boot-flow" | tr '[:upper:]' '[:lower:]' >> $GITHUB_ENV
+          echo "IMAGE_TAG=${{ github.event.inputs.image_tag }}" >> $GITHUB_ENV
+
+      # Run the Spring Boot Buildpack wrapper
+      - name: Build image with Maven Buildpack
+        run: |
           java -version
           mvn -version
-
+          cd spring-boot
+          pwd
+          env
+          mvn spring-boot:build-image \
+            -Dspring-boot.build-image.imageName=${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
+            -Dspring-boot.build-image.publish=true \
+            -Dspring-boot.build-image.docker.publishRegistry.username=${{ github.actor }} \
+            -Dspring-boot.build-image.docker.publishRegistry.password=${{ secrets.GITHUB_TOKEN }} \
+            -Dspring-boot.build-image.docker.publishRegistry.url=https://ghcr.io
