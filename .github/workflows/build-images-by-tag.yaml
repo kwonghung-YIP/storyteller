@@ -74,7 +74,7 @@ jobs:
       # a valid image name format: '[domainHost:port/][path/]name[:tag][@digest]' (with 'path' and 'name' containing only [a-z0-9][.][_][-]) 
       - name: Extract Image Name and Tag
         run: |
-          echo "IMAGE_NAME=`echo "ghcr.io/${{ github.repository }}/spring-boot-flow" | tr '[:upper:]' '[:lower:]'`" >> $GITHUB_ENVS
+          echo "IMAGE_NAME=`echo "ghcr.io/${{ github.repository }}/spring-boot-flow" | tr '[:upper:]' '[:lower:]'`" >> $GITHUB_ENV
           # echo "IMAGE_TAG=${{ github.event.inputs.image_tag }}" >> $GITHUB_ENV
           echo "IMAGE_TAG=${{ github.ref_name }}" >> $GITHUB_ENV
 
