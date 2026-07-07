@@ -71,7 +71,7 @@ jobs:
 
       - name: Extract Image Name and Tag
         run: |
-          echo "IMAGE_NAME=${{ github.repository }}/spring-boot-flow" >> $GITHUB_ENV
+          echo "IMAGE_NAME=ghcr.io/${{ github.repository }}/spring-boot-flow" >> $GITHUB_ENV
           echo "IMAGE_TAG=${{ github.event.inputs.image_tag }}" >> $GITHUB_ENV
 
       # Run the Spring Boot Buildpack wrapper
