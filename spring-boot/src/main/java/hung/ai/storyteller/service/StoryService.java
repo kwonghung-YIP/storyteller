@@ -25,14 +25,14 @@ public class StoryService implements FlowService {
     final private RequestSender sender;
 
     final private Map<AgentResponse.Type, ResponseHandler> handlers = Map.of(
-        AgentResponse.Type.WRITER_STORY, this::handleWriterResponse,
-        AgentResponse.Type.EDITOR_COMMENT, this::handleEditorResponse
+        AgentResponse.Type.WRITER_MANUSCRIPT, this::handleWriterResponse,
+        AgentResponse.Type.EDITOR_FEEDBACK, this::handleEditorResponse
     );
 
     public Story requestFirstDraft(String idea) {
         Story story = new Story();
         story.setIdea(idea);
-        story.setStatus(Story.Status.INIT);
+        story.setState(Story.State.INIT);
         //story.getStories().add("edition#1");
         //story.getComments().add("comment#1");
         repository.save(story);
@@ -70,56 +70,60 @@ public class StoryService implements FlowService {
 
     public void handleWriterResponse(Story story, AgentResponse response) {
         JsonNode output = response.getModelOutput();
-        String draft = output.get("story").stringValue();
+        String manuscript = output.get("manuscript").stringValue();
         story.setWriterChatId(response.getChatId());
-        story.getStories().add(draft);
+        story.getManuscripts().add(manuscript);
 
         //log.info("Received {} edition story {}.", story.getStories().size(), draft);
 
         if (story.getNumOfReview() < 2) {
+            story.setState(Story.State.REVIEW);
+
             AgentRequest editorRequest = new AgentRequest(
                 story.getType(), story.getFlowId(), "editor#1", 
-                AgentRequest.Type.EDITOR_REVIEW_STORY);
+                AgentRequest.Type.EDITOR_REVIEW_MANUSCRIPT);
 
             editorRequest.setChatId(story.getEditorChatId());
 
             var input = objectMapper.createObjectNode();
-            input.put("edition", story.getStories().size());
-            input.put("story", draft);
+            input.put("idea", story.getIdea());
+            input.put("manuscript", manuscript);
             editorRequest.setUserInput(input);
 
             sender.sendRequest(editorRequest);     
         } else {
-            story.setStatus(Story.Status.PUBLISH);
+            story.setState(Story.State.PUBLISHED);
         }
     }
 
     public void handleEditorResponse(Story story, AgentResponse response) {
         JsonNode output = response.getModelOutput();
-        boolean hasComment = output.get("hasComment").booleanValue();
+        boolean hasFeedback = output.get("hasFeedback").booleanValue();
         story.setEditorChatId(response.getChatId());
         
-        if (hasComment) {
-            String comment = output.get("comment").stringValue();
+        if (hasFeedback) {
+            story.setState(Story.State.EDITING);
+
+            String feedback = output.get("feedback").stringValue();
             //log.info("Editor has comment on the latest edition :[%s].".formatted(comment));
 
-            story.getComments().add(comment);
+            story.getFeedbacks().add(feedback);
 
             AgentRequest writerRequest = new AgentRequest(
                 story.getType(), story.getFlowId(), "writer#1", 
-                AgentRequest.Type.WRITER_REVISE_STORY);
+                AgentRequest.Type.WRITER_REVISE_MANUSCRIPT);
 
             writerRequest.setChatId(story.getWriterChatId());
 
             var input = objectMapper.createObjectNode();
-            input.put("comment", comment);
+            input.put("feedback", feedback);
             writerRequest.setUserInput(input);
 
             sender.sendRequest(writerRequest);
         } else {
-            log.info("Editor has no futher comment on the story.");
+            log.info("Editor has no futher feedback on the story.");
             
-            story.setStatus(Story.Status.PUBLISH);
+            story.setState(Story.State.PUBLISHED);
         }
     }
 }

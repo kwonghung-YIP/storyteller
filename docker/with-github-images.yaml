@@ -3,7 +3,7 @@ services:
     profiles:
       - with-github-images
 
-    image: ghcr.io/kwonghung-yip/storyteller/python-agent:${RELEASE_VERSION:-v0.1.1}
+    image: ghcr.io/kwonghung-yip/storyteller/python-agent:${RELEASE_VERSION:-v0.1.2}
     container_name: python-app
     user: "888:888"
     
@@ -31,7 +31,7 @@ services:
     profiles:
       - with-github-images
 
-    image: ghcr.io/kwonghung-yip/storyteller/spring-boot-flow:${RELEASE_VERSION:-v0.1.1}
+    image: ghcr.io/kwonghung-yip/storyteller/spring-boot-flow:${RELEASE_VERSION:-v0.1.2}
     container_name: spring-boot
 
     ports:

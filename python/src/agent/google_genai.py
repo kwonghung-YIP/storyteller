@@ -125,7 +125,7 @@ class GoogleLLM(BaseModel):
         mockFilePrefix:str = f"{request.agentId}-{request.type}-batch"
 
         if self.mockCall:
-            batchJob:BatchJob = load_latest_mock_batchjob(self.mockPAth / 'async-batch', request)
+            batchJob:BatchJob = load_latest_mock_batchjob(self.mockPath / 'async-batch', request)
         else:
             apikey:str = GoogleLLM.load_apikey()
             

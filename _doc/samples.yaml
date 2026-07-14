@@ -1,0 +1,60 @@
+writer#1:
+  _target_: model.AgentConfig  # Hydra config able to create an AgentConfig instance from this yaml file 
+  id: writer#1                 # agentId of this config yaml
+  provider: google-genai       # provider of the LLM model - Google GenAI, OpenAI, ollama, etc...
+  mode: async-batch            # how to call generate_content API regular/batch job 
+  model: gemini-25.flash-lite  # model used for generate_content call
+
+  response_type_mapping:       # A simple mapping between Agent Request Type and Response Type
+    WRITER_FIRST_DRAFT: WRITER_MANUSCRIPT
+    WRITER_REVISE_MANUSCRIPT: WRITER_MANUSCRIPT
+
+  role: |-
+    As a Children's Fairy Tale Writer ...
+
+  goal: |-
+    Your ultimate goal ...
+
+  rules:
+    - |-
+      Respect the Magic, But ...
+      ...
+    - |-
+      Never Underestimate Your ...
+      ...
+
+  templates: # jinja2 templates for different scenarios
+    system-instruction:
+      === ROLE ===
+      {{ config.role }}
+
+      === GOAL ===
+      {{ config.goal }}
+
+      === RULES ===
+      {% for rule in config.rules %}
+      {{ loop.index }}. {{ rule }}
+      {% endfor %}
+
+    chat-message: |-
+      {{ role }}: {{ text }}
+
+    model-output:
+      google-genai: |-
+        {
+          "story": {{ response.text|tojson }}
+        }
+
+    request:
+      WRITER_FIRST_DRAFT: |-
+        Could you draft the story base on the idea provided by user.
+
+        Idea:
+        {{ userInput.idea }}
+
+      WRITER_REVISE_MANUSCRIPT: |-
+        Please revise the manuscript according to the Editor feedbacks to your last manuscript:
+
+        Editor's feedback:
+        {{ userInput.feedback }}
+    

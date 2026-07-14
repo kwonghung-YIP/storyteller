@@ -102,8 +102,8 @@ writer#1:
       instead on action, dialogue, and emotion.
 
   response_type_mapping:
-      WRITER_FIRST_DRAFT: WRITER_STORY
-      WRITER_REVISE_STORY: WRITER_STORY
+      WRITER_FIRST_DRAFT: WRITER_MANUSCRIPT
+      WRITER_REVISE_MANUSCRIPT: WRITER_MANUSCRIPT
 
   templates:
     system-instruction:
@@ -124,7 +124,7 @@ writer#1:
     model-output:
       google-genai: |-
         {
-          "story": {{ response.text|tojson }}
+          "manuscript": {{ response.text|tojson }}
         }
 
     request:
@@ -134,10 +134,9 @@ writer#1:
         Idea:
         {{ userInput.idea }}
 
-      WRITER_REVISE_STORY: |-
-        The Editor reviewed the last draft of your story and has the following comments, please update 
-        the story based on the provided comments:
+      WRITER_REVISE_MANUSCRIPT: |-
+        Please revise the manuscript according to the Editor's feedback to your last draft:
 
-        Editor's comments:
-        {{ userInput.comment }}
+        Editor's feedback:
+        {{ userInput.feedback }}
     

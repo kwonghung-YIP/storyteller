@@ -24,11 +24,11 @@ import tools.jackson.databind.ObjectMapper;
 @Entity
 public class Story extends Flow {
 
-    public enum Status {
+    public enum State {
         INIT,
-        DRAFT,
+        EDITING,
         REVIEW,
-        PUBLISH
+        PUBLISHED
     }
 
     public Story() {
@@ -42,17 +42,17 @@ public class Story extends Flow {
     private String idea;
 
     @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "story_editions", joinColumns = @JoinColumn(name = "flow_id"))
+    @CollectionTable(name = "writer_manuscript", joinColumns = @JoinColumn(name = "flow_id"))
     @Column(columnDefinition = "TEXT")
-    private List<String> stories = new ArrayList<>();
+    private List<String> manuscripts = new ArrayList<>();
 
     @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "story_comments", joinColumns = @JoinColumn(name = "flow_id"))
+    @CollectionTable(name = "editor_feedback", joinColumns = @JoinColumn(name = "flow_id"))
     @Column(columnDefinition = "TEXT")
-    private List<String> comments = new ArrayList<>();
+    private List<String> feedbacks = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
-    private Status status = Status.INIT;
+    private State state = State.INIT;
 
     @Transient
     private ObjectMapper objectMapper = new ObjectMapper();
@@ -63,7 +63,7 @@ public class Story extends Flow {
     }
     
     public int getNumOfReview() {
-        return this.comments.size();
+        return this.feedbacks.size();
     }
 
 }

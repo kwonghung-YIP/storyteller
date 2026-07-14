@@ -1,0 +1,69 @@
+{
+    "requestId": <<UUID#1>>,
+    "type": "WRITER_REVISE_MANUSCRIPT",
+    "agentId": "writer#1",
+    "chatId": <<UUID#2>>,
+    "flowType": "STORY",
+    "flowId": <<UUID#3>>,
+    "userInput": {...}
+}
+
+{
+    "responseId": <<UUID#4>>,
+    "requestId": <<UUID#1>>,
+    "type": "WRITER_MANUSCRIPT",
+    "agentId": "writer#1",
+    "chatId": <<UUID#2>>,
+    "flowType": "STORY",
+    "flowId": <<UUID#3>>,
+    "modelOutput": {...}
+}
+
+{
+    "chatId": <<UUID#2>>,
+    "agentId": "writer#1",
+    "messages": [
+        { "role": "user", "text": ..., "requestId": ...},
+        { "role": "system", "text": ..., "responseId": ...},
+        ...
+        { "role": "user", "text": ..., "requestId": <<UUID#1>>},
+    ]
+}
+
+{
+    "chatId": <<UUID#2>>,
+    "agentId": "writer#1",
+    "messages": [
+        { "role": "user", "text": ..., "requestId": ...},
+        { "role": "system", "text": ..., "responseId": ...},
+        ...
+        { "role": "user", "text": ..., "requestId": <<UUID#1>>},
+        { "role": "system", "text": ..., "responseId": <<UUID#4>>},
+    ]
+}
+
+{
+    "type": "STORY",
+    "id": <<UUID#3>>,
+    "state": ...,
+    "writerChatId": <<UUID#2>>,
+    "editorChatId": <<UUID#5>>,
+    "idea": ...,
+    "manuscript": [...],
+    "feedback": [...]
+}
+
+"arguments": {
+    "x-queue-type": "quorum",
+}
+
+"arguments": {
+    "x-queue-type": "quorum",
+    "x-delayed-retry-type": "all", #disabled/all/failed/returned
+    "x-delayed-retry-min": 1000, #ms
+    "x-delayed-retry-max": 30000, #ms
+    "x-delivery-limit": 5,
+    "x-dead-letter-exchange": "dead-letter-exchange",
+    "x-dead-letter-routing-key": "request-dlq"
+}
+

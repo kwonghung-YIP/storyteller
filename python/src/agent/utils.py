@@ -5,7 +5,7 @@ import uuid
 
 from omegaconf import DictConfig
 from hydra.utils import instantiate
-from google.genai.types import GenerateContentResponse, BatchJob, InlinedResponse, JobState
+from google.genai.types import GenerateContentResponse, BatchJob, InlinedResponse, JobState, DeleteResourceJob
 from google.genai.client import Client
 from sqlalchemy.ext.asyncio import AsyncSession
 from pydantic import ValidationError
@@ -134,7 +134,10 @@ class AgentHelper:
                         session.add(record)
 
                         #if job.done:
-                        #    await self.handle_completed_batchjob(session, job, record)        
+                        #    await self.handle_completed_batchjob(session, job, record)
+
+                        logger.info("Delete the BatchJob %s from Google GenAI", job.name)
+                        deleted:DeleteResourceJob = await client.batches.delete(name=job.name)
 
                     else:
                         if record.state == job.state:

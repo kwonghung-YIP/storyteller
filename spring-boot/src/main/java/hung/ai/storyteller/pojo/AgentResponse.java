@@ -12,8 +12,8 @@ import tools.jackson.databind.JsonNode;
 public class AgentResponse {
 
     public enum Type {
-        WRITER_STORY,
-        EDITOR_COMMENT
+        WRITER_MANUSCRIPT,
+        EDITOR_FEEDBACK
     }
 
     final private Flow.Type flowType;

@@ -88,7 +88,7 @@ editor#1:
       happens next.
 
   response_type_mapping:
-      EDITOR_REVIEW_STORY: EDITOR_COMMENT
+      EDITOR_REVIEW_MANUSCRIPT: EDITOR_FEEDBACK
 
   templates:
     system-instruction:
@@ -109,19 +109,18 @@ editor#1:
     model-output:
       google-genai: |-
         {
-          "hasComment": true,
-          "comment": {{ response.text|tojson }}
+          "hasFeedback": true,
+          "feedback": {{ response.text|tojson }}
         }
 
     request:
-      EDITOR_REVIEW_STORY: |-
-        Below is the idea of the story and the latest edition written by the writer, please review and
-        provide your comments to improve the story, or state "no further comment" if the story is good
-        enough.
+      EDITOR_REVIEW_MANUSCRIPT: |-
+        Below is the idea of the story and the latest manuscript, please review and provide your feedback
+        to improve the story, or state "no further feedback" if the story is good enough.
 
         Story Idea:
         {{ userInput.idea }}
 
         Writer's story:
-        {{ userInput.story }}
+        {{ userInput.manuscript }}
     

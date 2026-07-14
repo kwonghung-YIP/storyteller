@@ -10,8 +10,8 @@ public class AgentRequest {
 
     public enum Type {
         WRITER_FIRST_DRAFT,
-        WRITER_REVISE_STORY,
-        EDITOR_REVIEW_STORY
+        WRITER_REVISE_MANUSCRIPT,
+        EDITOR_REVIEW_MANUSCRIPT
     }
 
     final private Flow.Type flowType;
